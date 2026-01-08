@@ -11,26 +11,70 @@ include 'includes/header.php';
             <p>Готови сме да отговорим на вашите въпроси и да предложим решение за вашия проект</p>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
-            <div class="service-card">
-                <div class="service-icon">📍</div>
-                <h3>Адрес</h3>
-                <p>Пловдив 4000<br>ул. „Елиезер Калев" 2, ет. 2</p>
-            </div>
+        <!-- Contact Information - Horizontal -->
+        <div class="contact-info-horizontal">
+            <h2 style="color: var(--primary-color); margin-bottom: 2rem; text-align: center;">Контактна информация</h2>
+            <div class="contact-cards-grid">
+                <div class="contact-card contact-card-address">
+                    <div class="contact-card-icon">📍</div>
+                    <h3>Адрес</h3>
+                    <div class="contact-card-content">
+                        <p>Пловдив 4000</p>
+                        <p>ул. „Елиезер Калев" 2, ет. 2</p>
+                    </div>
+                </div>
 
-            <div class="service-card">
-                <div class="service-icon">📞</div>
-                <h3>Телефон</h3>
-                <p><strong>Офис:</strong><br>+359 32 590 271</p>
-                <p><strong>GSM:</strong><br>+359 895 330885<br>+359 896 575351</p>
-            </div>
+                <div class="contact-card contact-card-phone">
+                    <div class="contact-card-icon">📞</div>
+                    <h3>Телефон</h3>
+                    <div class="contact-card-content">
+                        <div class="contact-item">
+                            <span class="contact-label">Офис:</span>
+                            <a href="tel:+35932590271" class="contact-link">+359 32 590 271</a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-label">GSM:</span>
+                            <div class="contact-links">
+                                <a href="tel:+359895330885" class="contact-link">+359 895 330885</a>
+                                <a href="tel:+359896575351" class="contact-link">+359 896 575351</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="service-card">
-                <div class="service-icon">📧</div>
-                <h3>Имейл</h3>
-                <p>office@riolit.bg</p>
-                <p style="margin-top: 1rem;"><strong>Web:</strong><br>www.riolit.bg</p>
+                <div class="contact-card contact-card-email">
+                    <div class="contact-card-icon">📧</div>
+                    <h3>Имейл</h3>
+                    <div class="contact-card-content">
+                        <div class="contact-item">
+                            <a href="mailto:office@riolit.bg" class="contact-link contact-link-email">office@riolit.bg</a>
+                        </div>
+                        <div class="contact-item" style="margin-top: 1rem;">
+                            <span class="contact-label">Web:</span>
+                            <a href="http://www.riolit.bg" target="_blank" rel="noopener noreferrer" class="contact-link">www.riolit.bg</a>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
+
+        <!-- Google Maps - Full Width -->
+        <div class="contact-map-section" style="margin-top: 3rem; margin-bottom: 3rem;">
+            <h2 style="color: var(--primary-color); margin-bottom: 2rem; text-align: center;">Нашето местоположение</h2>
+            <div class="map-container">
+                <iframe 
+                    src="https://maps.google.com/maps?q=Plovdiv,+ul.+Eliezer+Kalev+2&hl=bg&z=15&output=embed" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Риолит Инженеринг ЕООД - Пловдив, ул. Елиезер Калев 2">
+                </iframe>
+            </div>
+            <p style="margin-top: 1rem; color: var(--text-light); font-size: 0.9rem; text-align: center;">
+                <a href="https://www.google.com/maps/search/?api=1&query=Пловдив+ул.+Елиезер+Калев+2" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color); text-decoration: none;">
+                    Отвори в Google Maps →
+                </a>
+            </p>
         </div>
 
         <div class="contact-form">
@@ -48,6 +92,8 @@ include 'includes/header.php';
                         echo 'Моля, попълнете всички задължителни полета.';
                     } elseif ($_GET['error'] == 'invalid_email') {
                         echo 'Моля, въведете валиден имейл адрес.';
+                    } elseif ($_GET['error'] == 'privacy_required') {
+                        echo 'Моля, приемете Политиката за поверителност.';
                     } else {
                         echo 'Възникна грешка при изпращането на съобщението.';
                     }
@@ -71,13 +117,15 @@ include 'includes/header.php';
                 </div>
 
                 <div class="form-group">
-                    <label for="subject">Тема *</label>
-                    <input type="text" id="subject" name="subject" required>
+                    <label for="message">Съобщение *</label>
+                    <textarea id="message" name="message" required></textarea>
                 </div>
 
                 <div class="form-group">
-                    <label for="message">Съобщение *</label>
-                    <textarea id="message" name="message" required></textarea>
+                    <label class="privacy-checkbox">
+                        <input type="checkbox" name="privacy" required>
+                        <span>Съгласен съм с <a href="privacy-policy.php" target="_blank" style="color: var(--primary-color); text-decoration: underline;">Политика за поверителност</a> *</span>
+                    </label>
                 </div>
 
                 <button type="submit" class="btn btn-primary btn-large">Изпрати съобщение</button>

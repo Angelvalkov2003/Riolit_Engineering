@@ -125,6 +125,7 @@ include 'includes/header.php';
                 </div>
                 <div class="quality-item">
                     <h3><?php echo __('quality_chamber'); ?></h3>
+                    <img src="medal.jpg" alt="Член на КАМАРАТА НА СТРОИТЕЛИТЕ В БЪЛГАРИЯ" style="max-width: 200px; width: 100%; height: auto; margin: 1rem 0; display: block;">
                     <p><?php echo __('quality_chamber_desc'); ?></p>
                 </div>
             </div>

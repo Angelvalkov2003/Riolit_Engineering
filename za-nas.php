@@ -96,7 +96,12 @@ include 'includes/header.php';
             </div>
 
             <h2>Членство и партньорства</h2>
-            <p><strong>Член на КАМАРАТА НА СТРОИТЕЛИТЕ В БЪЛГАРИЯ</strong></p>
+            <div style="display: flex; align-items: center; gap: 2rem; margin: 2rem 0; flex-wrap: wrap;">
+                <img src="medal.jpg" alt="Член на КАМАРАТА НА СТРОИТЕЛИТЕ В БЪЛГАРИЯ" style="max-width: 250px; width: 100%; height: auto; border-radius: 8px; box-shadow: var(--shadow);">
+                <div>
+                    <p><strong>Член на КАМАРАТА НА СТРОИТЕЛИТЕ В БЪЛГАРИЯ</strong></p>
+                </div>
+            </div>
             <p>РИОЛИТ ИНЖЕНЕРИНГ ЕООД е <strong>Официален представител на VALSIR S.p.A, Италия</strong> на Система за ВАКУМНО ОТВОДНЯВАНЕ НА ПЛОСКИ ПОКРИВИ – RAIN PLUS ©</p>
 
             <h2>Обхват на работа</h2>
