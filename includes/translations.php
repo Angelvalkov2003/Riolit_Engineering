@@ -97,6 +97,9 @@ $texts = [
         'stat_projects' => 'Завършени проекти',
         'stat_equipment' => 'Единици техника',
         'stat_quality' => 'Качество',
+        
+        // Partners
+        'section_partners' => 'Нашите Партньори',
     ],
     'en' => [
         // Navigation
@@ -154,6 +157,9 @@ $texts = [
         'stat_projects' => 'Completed Projects',
         'stat_equipment' => 'Equipment Units',
         'stat_quality' => 'Quality',
+        
+        // Partners
+        'section_partners' => 'Our Partners',
     ]
 ];
 
