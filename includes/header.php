@@ -55,10 +55,6 @@ if (!isset($lang)) {
                 <div class="logo">
                     <a href="index.php">
                         <img src="logo_riolit.jpg" alt="Риолит Инженеринг ЕООД" class="logo-img">
-                        <div class="logo-text-wrapper">
-                            <span class="logo-text">Риолит Инженеринг</span>
-                            <span class="logo-subtitle">ЕООД</span>
-                        </div>
                     </a>
                 </div>
                 <div class="navbar-center">
