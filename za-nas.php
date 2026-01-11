@@ -39,7 +39,7 @@ include 'includes/header.php';
                     </div>
                 </div>
                 <div>
-                    <img src="https://www.komatsu.eu/-/media/projects/komatsu/category-banner/miniexcavators.ashx?rev=2ac44d1f4d0c450c9ba1217645acf5ab" alt="Мини багер Komatsu">
+                    <img src="https://www.komatsu.eu/-/media/projects/komatsu/products/mini-excavators/pc17r_5.ashx?rev=022bc77f0df6480a92331b9635e1a0fa" alt="Мини багер Komatsu">
                     <div>
                         <strong>3.</strong> Мини багер Komatsu с кофа 1 м³ с кофа 40, 60 и 90 см. – 2 бр
                     </div>
@@ -51,7 +51,7 @@ include 'includes/header.php';
                     </div>
                 </div>
                 <div>
-                    <img src="https://en.maz-man.by/wp-content/uploads/2023/03/sam6x4_1.jpg" alt="Самосвал 4-осен MAN">
+                    <img src="https://www.mmtequipment.com/media/images/s/HR263/Man_TGS_41400_BBE5_-_8X4_2_1.webp" alt="Самосвал 4-осен MAN">
                     <div>
                         <strong>5.</strong> Самосвал 4-осен MAN, 17 t - 2 бр
                     </div>
@@ -129,25 +129,25 @@ include 'includes/header.php';
                     </div>
                 </div>
                 <div>
-                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400" alt="Боркорона">
+                    <img src="https://caykentools.com/wp-content/uploads/2021/01/Dk-450-1-1-scaled.jpg" alt="Боркорона">
                     <div>
                         <strong>18.</strong> Боркорона
                     </div>
                 </div>
                 <div>
-                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400" alt="Струг">
+                    <img src="assets/media/19.jpg" alt="Струг">
                     <div>
                         <strong>19.</strong> Струг
                     </div>
                 </div>
                 <div>
-                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400" alt="Други инструменти">
+                    <img src="assets/media/20.jpg" alt="Други инструменти">
                     <div>
                         <strong>20.</strong> Други инструменти
                     </div>
                 </div>
                 <div>
-                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400" alt="Фреза за канали">
+                    <img src="assets/media/21.jpg" alt="Фреза за канали">
                     <div>
                         <strong>21.</strong> Фреза за канали – без прахова
                     </div>
