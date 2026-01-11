@@ -27,7 +27,7 @@ include 'includes/header.php';
             <p>Фирмата разполага със следните техники, механизация и инструменти:</p>
             <div class="equipment-grid">
                 <div>
-                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400" alt="Колесен багер-чук Caterpillar m316">
+                    <img src="https://dmt55mxnkgbz2.cloudfront.net/900x0_s3-50647-MNSW-EX-CAT-M316-NEXT.jpg" alt="Колесен багер-чук Caterpillar m316">
                     <div>
                         <strong>1.</strong> Колесен багер-чук Caterpillar m316
                     </div>
