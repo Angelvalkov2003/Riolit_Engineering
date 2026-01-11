@@ -15,15 +15,6 @@ include 'includes/header.php';
         <div class="contact-info-horizontal">
             <h2 style="color: var(--primary-color); margin-bottom: 2rem; text-align: center;">Контактна информация</h2>
             <div class="contact-cards-grid">
-                <div class="contact-card contact-card-address">
-                    <div class="contact-card-icon">📍</div>
-                    <h3>Адрес</h3>
-                    <div class="contact-card-content">
-                        <p>Пловдив 4000</p>
-                        <p>ул. „Елиезер Калев" 2, ет. 2</p>
-                    </div>
-                </div>
-
                 <div class="contact-card contact-card-phone">
                     <div class="contact-card-icon">📞</div>
                     <h3>Телефон</h3>
@@ -55,106 +46,147 @@ include 'includes/header.php';
                         </div>
                     </div>
                 </div>
+
+                <div class="contact-card contact-card-facebook">
+                    <div class="contact-card-icon facebook-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="48" height="48">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </div>
+                    <h3>Facebook</h3>
+                    <div class="contact-card-content">
+                        <div class="contact-item" style="margin-bottom: 0.5rem;">
+                            <p style="color: var(--text-medium); font-weight: 600; margin: 0;">Риолит Инженеринг</p>
+                        </div>
+                        <div class="contact-item">
+                            <a href="https://www.facebook.com/rioliting#" target="_blank" rel="noopener noreferrer" class="contact-link facebook-link">
+                                <span>Последвайте ни</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" style="margin-left: 0.5rem; vertical-align: middle;">
+                                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <!-- Google Maps - Full Width -->
-        <div class="contact-map-section" style="margin-top: 3rem; margin-bottom: 3rem;">
-            <h2 style="color: var(--primary-color); margin-bottom: 2rem; text-align: center;">Нашето местоположение</h2>
-            <div class="map-container">
-                <iframe 
-                    src="https://maps.google.com/maps?q=Plovdiv,+ul.+Eliezer+Kalev+2&hl=bg&z=15&output=embed" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade"
-                    title="Риолит Инженеринг ЕООД - Пловдив, ул. Елиезер Калев 2">
-                </iframe>
+        <div class="contact-form-wrapper">
+            <div class="contact-form-header">
+                <h2>Изпратете ни съобщение</h2>
+                <p>Попълнете формата по-долу и ние ще се свържем с вас възможно най-скоро</p>
             </div>
-            <p style="margin-top: 1rem; color: var(--text-light); font-size: 0.9rem; text-align: center;">
-                <a href="https://www.google.com/maps/search/?api=1&query=Пловдив+ул.+Елиезер+Калев+2" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color); text-decoration: none;">
-                    Отвори в Google Maps →
-                </a>
-            </p>
-        </div>
 
-        <div class="contact-form">
-            <h2 style="margin-bottom: 1.5rem; color: var(--primary-color);">Изпратете ни съобщение</h2>
             <?php if (isset($_GET['success']) && $_GET['success'] == '1'): ?>
-                <div style="background: #d4edda; color: #155724; padding: 1rem; border-radius: 5px; margin-bottom: 1.5rem; border: 1px solid #c3e6cb;">
-                    <strong>Успех!</strong> Вашето съобщение е изпратено успешно. Ще се свържем с вас скоро.
+                <div class="form-message form-message-success">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                    <div>
+                        <strong>Успех!</strong>
+                        <p>Вашето съобщение е изпратено успешно. Ще се свържем с вас скоро.</p>
+                    </div>
                 </div>
             <?php endif; ?>
             <?php if (isset($_GET['error'])): ?>
-                <div style="background: #f8d7da; color: #721c24; padding: 1rem; border-radius: 5px; margin-bottom: 1.5rem; border: 1px solid #f5c6cb;">
-                    <strong>Грешка!</strong> 
-                    <?php 
-                    if ($_GET['error'] == 'missing_fields') {
-                        echo 'Моля, попълнете всички задължителни полета.';
-                    } elseif ($_GET['error'] == 'invalid_email') {
-                        echo 'Моля, въведете валиден имейл адрес.';
-                    } elseif ($_GET['error'] == 'privacy_required') {
-                        echo 'Моля, приемете Политиката за поверителност.';
-                    } else {
-                        echo 'Възникна грешка при изпращането на съобщението.';
-                    }
-                    ?>
+                <div class="form-message form-message-error">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="8" x2="12" y2="12"></line>
+                        <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                    </svg>
+                    <div>
+                        <strong>Грешка!</strong>
+                        <p>
+                            <?php 
+                            if ($_GET['error'] == 'missing_fields') {
+                                echo 'Моля, попълнете всички задължителни полета.';
+                            } elseif ($_GET['error'] == 'invalid_email') {
+                                echo 'Моля, въведете валиден имейл адрес.';
+                            } elseif ($_GET['error'] == 'privacy_required') {
+                                echo 'Моля, приемете Политиката за поверителност.';
+                            } else {
+                                echo 'Възникна грешка при изпращането на съобщението.';
+                            }
+                            ?>
+                        </p>
+                    </div>
                 </div>
             <?php endif; ?>
-            <form action="contact-handler.php" method="POST">
-                <div class="form-group">
-                    <label for="name">Име *</label>
-                    <input type="text" id="name" name="name" required>
+
+            <form action="contact-handler.php" method="POST" class="contact-form-modern">
+                <div class="form-row">
+                    <div class="form-group-modern">
+                        <label for="name">
+                            <span class="label-text">Име</span>
+                            <span class="label-required">*</span>
+                        </label>
+                        <div class="input-wrapper">
+                            <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                            <input type="text" id="name" name="name" placeholder="Вашето име" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group-modern">
+                        <label for="email">
+                            <span class="label-text">Имейл</span>
+                            <span class="label-required">*</span>
+                        </label>
+                        <div class="input-wrapper">
+                            <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <input type="email" id="email" name="email" placeholder="ваш@имейл.com" required>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="form-group">
-                    <label for="email">Имейл *</label>
-                    <input type="email" id="email" name="email" required>
+                <div class="form-group-modern">
+                    <label for="phone">
+                        <span class="label-text">Телефон</span>
+                    </label>
+                    <div class="input-wrapper">
+                        <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                        <input type="tel" id="phone" name="phone" placeholder="+359 888 123 456">
+                    </div>
                 </div>
 
-                <div class="form-group">
-                    <label for="phone">Телефон</label>
-                    <input type="tel" id="phone" name="phone">
+                <div class="form-group-modern">
+                    <label for="message">
+                        <span class="label-text">Съобщение</span>
+                        <span class="label-required">*</span>
+                    </label>
+                    <div class="textarea-wrapper">
+                        <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                        <textarea id="message" name="message" placeholder="Напишете вашето съобщение тук..." required></textarea>
+                    </div>
                 </div>
 
-                <div class="form-group">
-                    <label for="message">Съобщение *</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-
-                <div class="form-group">
-                    <label class="privacy-checkbox">
+                <div class="form-group-modern checkbox-group">
+                    <label class="privacy-checkbox-modern">
                         <input type="checkbox" name="privacy" required>
-                        <span>Съгласен съм с <a href="privacy-policy.php" target="_blank" style="color: var(--primary-color); text-decoration: underline;">Политика за поверителност</a> *</span>
+                        <span class="checkbox-custom"></span>
+                        <span class="checkbox-text">Съгласен съм с <a href="privacy-policy.php" target="_blank">Политика за поверителност</a> <span class="label-required">*</span></span>
                     </label>
                 </div>
 
-                <button type="submit" class="btn btn-primary btn-large">Изпрати съобщение</button>
+                <button type="submit" class="btn-submit-modern">
+                    <span>Изпрати съобщение</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                </button>
             </form>
-        </div>
-
-        <div style="margin-top: 3rem; padding: 2rem; background: var(--bg-light); border-radius: 10px;">
-            <h2 style="margin-bottom: 1rem; color: var(--primary-color);">Нашите услуги</h2>
-            <p style="color: var(--text-light); line-height: 1.8; margin-bottom: 1rem;">
-                Ние предлагаме безплатни консултации и проектантска подкрепа за всички ваши проекти. Нашият екип е готов да ви помогне с:
-            </p>
-            <ul style="list-style: none; padding-left: 0;">
-                <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative; color: var(--text-light);">
-                    <span style="position: absolute; left: 0; color: var(--primary-color); font-weight: bold;">✓</span>
-                    Консултации по проекти
-                </li>
-                <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative; color: var(--text-light);">
-                    <span style="position: absolute; left: 0; color: var(--primary-color); font-weight: bold;">✓</span>
-                    Проектантска подкрепа
-                </li>
-                <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative; color: var(--text-light);">
-                    <span style="position: absolute; left: 0; color: var(--primary-color); font-weight: bold;">✓</span>
-                    Иновативни решения
-                </li>
-                <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative; color: var(--text-light);">
-                    <span style="position: absolute; left: 0; color: var(--primary-color); font-weight: bold;">✓</span>
-                    Технически съвети
-                </li>
-            </ul>
         </div>
     </section>
 </main>
