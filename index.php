@@ -82,15 +82,15 @@ include 'includes/header.php';
                 </div>
                 <div class="about-features">
                     <div class="feature-item">
-                        <span class="feature-number">30+</span>
+                        <span class="feature-number" data-target="30" data-suffix="+">0</span>
                         <span class="feature-label"><?php echo __('stat_projects'); ?></span>
                     </div>
                     <div class="feature-item">
-                        <span class="feature-number">21</span>
+                        <span class="feature-number" data-target="15" data-suffix="+">0</span>
                         <span class="feature-label"><?php echo __('stat_equipment'); ?></span>
                     </div>
                     <div class="feature-item">
-                        <span class="feature-number">100%</span>
+                        <span class="feature-number" data-target="100" data-suffix="%">0</span>
                         <span class="feature-label"><?php echo __('stat_quality'); ?></span>
                     </div>
                 </div>

@@ -95,7 +95,7 @@ $texts = [
         
         // Stats
         'stat_projects' => 'Завършени проекти',
-        'stat_equipment' => 'Единици техника',
+        'stat_equipment' => 'години опит',
         'stat_quality' => 'Качество',
         
         // Partners
@@ -155,7 +155,7 @@ $texts = [
         
         // Stats
         'stat_projects' => 'Completed Projects',
-        'stat_equipment' => 'Equipment Units',
+        'stat_equipment' => 'Years of Experience',
         'stat_quality' => 'Quality',
         
         // Partners

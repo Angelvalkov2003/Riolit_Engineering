@@ -77,29 +77,88 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Add animation on scroll
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: "0px 0px -50px 0px",
-  };
 
-  const observer = new IntersectionObserver(function (entries) {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = "1";
-        entry.target.style.transform = "translateY(0)";
+  // Animate numbers counter - all at once
+  let numbersAnimated = false;
+  const featureNumbers = document.querySelectorAll(".feature-number[data-target]");
+  
+  function animateAllNumbers() {
+    if (numbersAnimated) return;
+    numbersAnimated = true;
+    
+    const duration = 2000; // 2 seconds
+    const startTime = performance.now();
+    const startValue = 0;
+    
+    function updateAllNumbers(currentTime) {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      
+      // Easing function for smooth animation
+      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+      
+      featureNumbers.forEach((element) => {
+        const target = parseInt(element.getAttribute("data-target"));
+        const suffix = element.getAttribute("data-suffix") || "";
+        const currentValue = Math.floor(startValue + (target - startValue) * easeOutQuart);
+        
+        element.textContent = currentValue;
+        
+        if (progress >= 1) {
+          // Add suffix when animation completes
+          element.textContent = target + suffix;
+        }
+      });
+      
+      if (progress < 1) {
+        requestAnimationFrame(updateAllNumbers);
+      }
+    }
+    
+    requestAnimationFrame(updateAllNumbers);
+  }
+
+  // Observe the about-features container for animation
+  const aboutFeatures = document.querySelector(".about-features");
+  if (aboutFeatures) {
+    const numbersObserver = new IntersectionObserver(
+      function (entries) {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !numbersAnimated) {
+            animateAllNumbers();
+            numbersObserver.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.3,
+        rootMargin: "0px 0px -100px 0px",
+      }
+    );
+    
+    numbersObserver.observe(aboutFeatures);
+  }
+
+
+  // Smooth scroll for anchor links with offset
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+      if (href === '#' || href === '#!') return;
+      
+      e.preventDefault();
+      const target = document.querySelector(href);
+      if (target) {
+        const headerOffset = 80;
+        const elementPosition = target.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth',
+        });
       }
     });
-  }, observerOptions);
-
-  // Observe service cards and other elements
-  document
-    .querySelectorAll(".service-card, .quality-item, .project-card")
-    .forEach((el) => {
-      el.style.opacity = "0";
-      el.style.transform = "translateY(20px)";
-      el.style.transition = "opacity 0.6s ease, transform 0.6s ease";
-      observer.observe(el);
-    });
+  });
 
 });
