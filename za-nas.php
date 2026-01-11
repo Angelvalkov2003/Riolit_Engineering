@@ -63,7 +63,7 @@ include 'includes/header.php';
                     </div>
                 </div>
                 <div>
-                    <img src="https://image.made-in-china.com/203f0j00hkwlvbQPnepW/Dump-Trucks-4-Ton-in-Good-Condition-Mercedes-Tipper-Dump-Truckr-Sale.webp" alt="Самосвал Mercedes 4t">
+                    <img src="assets/media/7.jpg" alt="Самосвал Mercedes 4t">
                     <div>
                         <strong>7.</strong> Самосвал Mercedes 4t
                     </div>
