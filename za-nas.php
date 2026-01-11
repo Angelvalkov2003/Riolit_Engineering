@@ -1,155 +1,156 @@
 <?php
-$page_title = "За нас - Риолит Инженеринг ЕООД";
-$page_description = "Запознайте се с Риолит Инженеринг ЕООД - нашият екип, мисия и ценности";
+include 'includes/translations.php';
+$page_title = getPageTitle('about');
+$page_description = getPageDescription('about');
 include 'includes/header.php';
 ?>
 
 <main>
     <section class="page-content">
         <div class="page-header">
-            <h1>За Риолит Инженеринг ЕООД</h1>
-            <p>Професионализъм, качество и иновации в строителството</p>
+            <h1><?php echo __('about_title'); ?></h1>
+            <p><?php echo __('about_subtitle'); ?></p>
         </div>
 
         <div class="about-detail">
-            <h2>Нашата история</h2>
-            <p>Риолит Инженеринг ЕООД е строителна компания с основна дейност: изграждане на инфраструктурни и жилищни обекти, тясно специализирани в изкопи и насипи, доставка и монтажни услуги насочени в секторите: В и К, ЕЛ, Газоснабдяване, О и В, покривно отводняване, напоителни системи, дренаж, телекомуникации, вертикална планировка, пътна част, изграждане на тротоари и бордюри и павета.</p>
+            <h2><?php echo __('about_history_title'); ?></h2>
+            <p><?php echo __('about_history_text1'); ?></p>
             
-            <p>Ние поддържаме високи стандарти за качество, предоставяйки на клиентите си последователни и изключително професионални услуги. Ние се грижим и за по-добрият клиентски сервиз, включващ консултации и проектантска подкрепа също и иновативни решения в областта на най-новите приложения.</p>
+            <p><?php echo __('about_history_text2'); ?></p>
             
-            <p>Екипът на Риолит Инженеринг е от високо-квалифицирани професионалисти в областта на строително-монтажните услуги. Всеки член на екипа притежава дългогодишен опит и експертиза в своята област, което гарантира висококачествено изпълнение на всеки проект.</p>
+            <p><?php echo __('about_history_text3'); ?></p>
             
-            <p>Проектите в които участва Риолит Инженеринг са едни от водещите инфраструктурни проекти реализирани по Европейски програми и частни инвестиции. Ние сме горди с участието си в проекти, които подобряват инфраструктурата и качеството на живот в България.</p>
+            <p><?php echo __('about_history_text4'); ?></p>
             
-            <p>Материалите с които работи компанията са висококачествени и иновативни. Групите продукти с които работи компанията са подземни и надземни тръбни системи за водоснабдяване, канализация, дренаж, инфилтриращи системи, отопление, дъждоотвеждане, арматура, както и решения за телекомуникациите.</p>
+            <p><?php echo __('about_history_text5'); ?></p>
 
-            <h2>Техника и механизация</h2>
-            <p>Фирмата разполага със следните техники, механизация и инструменти:</p>
+            <h2><?php echo __('about_equipment_title'); ?></h2>
+            <p><?php echo __('about_equipment_desc'); ?></p>
             <div class="equipment-grid">
                 <div>
-                    <img src="https://dmt55mxnkgbz2.cloudfront.net/900x0_s3-50647-MNSW-EX-CAT-M316-NEXT.jpg" alt="Колесен багер-чук Caterpillar m316">
+                    <img src="https://dmt55mxnkgbz2.cloudfront.net/900x0_s3-50647-MNSW-EX-CAT-M316-NEXT.jpg" alt="<?php echo __('equipment_1'); ?>">
                     <div>
-                        <strong>1.</strong> Колесен багер-чук Caterpillar m316
+                        <strong>1.</strong> <?php echo __('equipment_1'); ?>
                     </div>
                 </div>
                 <div>
-                    <img src="assets/media/cat_432e.jpg" alt="Комбиниран багер Caterpillar 432E">
+                    <img src="assets/media/cat_432e.jpg" alt="<?php echo __('equipment_2'); ?>">
                     <div>
-                        <strong>2.</strong> Комбиниран багер Caterpillar 432E
+                        <strong>2.</strong> <?php echo __('equipment_2'); ?>
                     </div>
                 </div>
                 <div>
-                    <img src="https://www.komatsu.eu/-/media/projects/komatsu/products/mini-excavators/pc17r_5.ashx?rev=022bc77f0df6480a92331b9635e1a0fa" alt="Мини багер Komatsu">
+                    <img src="https://www.komatsu.eu/-/media/projects/komatsu/products/mini-excavators/pc17r_5.ashx?rev=022bc77f0df6480a92331b9635e1a0fa" alt="<?php echo __('equipment_3'); ?>">
                     <div>
-                        <strong>3.</strong> Мини багер Komatsu с кофа 1 м³ с кофа 40, 60 и 90 см. – 2 бр
+                        <strong>3.</strong> <?php echo __('equipment_3'); ?>
                     </div>
                 </div>
                 <div>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Bobcat_S650_skid_steer_loader_%2815084521732%29.jpg" alt="Бобкат">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Bobcat_S650_skid_steer_loader_%2815084521732%29.jpg" alt="<?php echo __('equipment_4'); ?>">
                     <div>
-                        <strong>4.</strong> Бобкат
+                        <strong>4.</strong> <?php echo __('equipment_4'); ?>
                     </div>
                 </div>
                 <div>
-                    <img src="https://www.mmtequipment.com/media/images/s/HR263/Man_TGS_41400_BBE5_-_8X4_2_1.webp" alt="Самосвал 4-осен MAN">
+                    <img src="https://www.mmtequipment.com/media/images/s/HR263/Man_TGS_41400_BBE5_-_8X4_2_1.webp" alt="<?php echo __('equipment_5'); ?>">
                     <div>
-                        <strong>5.</strong> Самосвал 4-осен MAN, 17 t - 2 бр
+                        <strong>5.</strong> <?php echo __('equipment_5'); ?>
                     </div>
                 </div>
                 <div>
-                    <img src="https://www.scaleart-shop.de/media/image/47/91/f6/SK_3Achs_Hinterkipper01toxHW4vkXgAjI_600x600.png" alt="Самосвал 3-осен Mercedes">
+                    <img src="https://www.scaleart-shop.de/media/image/47/91/f6/SK_3Achs_Hinterkipper01toxHW4vkXgAjI_600x600.png" alt="<?php echo __('equipment_6'); ?>">
                     <div>
-                        <strong>6.</strong> Самосвал 3-осен Mercedes, 14 t
+                        <strong>6.</strong> <?php echo __('equipment_6'); ?>
                     </div>
                 </div>
                 <div>
-                    <img src="assets/media/7.jpg" alt="Самосвал Mercedes 4t">
+                    <img src="assets/media/7.jpg" alt="<?php echo __('equipment_7'); ?>">
                     <div>
-                        <strong>7.</strong> Самосвал Mercedes 4t
+                        <strong>7.</strong> <?php echo __('equipment_7'); ?>
                     </div>
                 </div>
                 <div>
-                    <img src="https://www.road-constructionmachinery.com/photo/pl188849790-grade_ability_35_12_ton_xd123_double_drum_vibratory_road_roller.jpg" alt="Валяк 12 t">
+                    <img src="https://www.road-constructionmachinery.com/photo/pl188849790-grade_ability_35_12_ton_xd123_double_drum_vibratory_road_roller.jpg" alt="<?php echo __('equipment_8'); ?>">
                     <div>
-                        <strong>8.</strong> Валяк 12 t
+                        <strong>8.</strong> <?php echo __('equipment_8'); ?>
                     </div>
                 </div>
                 <div>
-                    <img src="https://smithshire.com/wp-content/uploads/2021/12/Dingli-JCPT-1823RT-600x600-1.jpg" alt="Дизелово Ножична Вишка 18м">
+                    <img src="https://smithshire.com/wp-content/uploads/2021/12/Dingli-JCPT-1823RT-600x600-1.jpg" alt="<?php echo __('equipment_9'); ?>">
                     <div>
-                        <strong>9.</strong> Дизелово Ножична Вишка 18м
+                        <strong>9.</strong> <?php echo __('equipment_9'); ?>
                     </div>
                 </div>
                 <div>
-                    <img src="https://image.made-in-china.com/202f0j00WBuiMDbhHIYq/90mm-to-315mm-HDPE-Butt-Fusion-Welding-Machine.webp" alt="Машина за челно заваряване">
+                    <img src="https://image.made-in-china.com/202f0j00WBuiMDbhHIYq/90mm-to-315mm-HDPE-Butt-Fusion-Welding-Machine.webp" alt="<?php echo __('equipment_10'); ?>">
                     <div>
-                        <strong>10.</strong> Машина за челно заваряване – 5 бр
+                        <strong>10.</strong> <?php echo __('equipment_10'); ?>
                     </div>
                 </div>
                 <div>
-                    <img src="https://evopipes.lv/storage/images/cache/3e02af6d3adb000431a1d2e007a04e1a34badbfe/3e02af6d3adb000431a1d2e007a04e1a34badbfe_product_full.png" alt="Машина за Електро заваряване">
+                    <img src="https://evopipes.lv/storage/images/cache/3e02af6d3adb000431a1d2e007a04e1a34badbfe/3e02af6d3adb000431a1d2e007a04e1a34badbfe_product_full.png" alt="<?php echo __('equipment_11'); ?>">
                     <div>
-                        <strong>11.</strong> Машина за Електро заваряване ф 40 – ф 500 (дифузно) 1 вид
+                        <strong>11.</strong> <?php echo __('equipment_11'); ?>
                     </div>
                 </div>
                 <div>
-                    <img src="assets/media/type2.jpg" alt="Машина за Електро заваряване">
+                    <img src="assets/media/type2.jpg" alt="<?php echo __('equipment_12'); ?>">
                     <div>
-                        <strong>12.</strong> Машина за Електро заваряване (дифузно) 2 вид
+                        <strong>12.</strong> <?php echo __('equipment_12'); ?>
                     </div>
                 </div>
                 <div>
-                    <img src="assets/media/13.jpg" alt="Пневматична машина тип Къртица">
+                    <img src="assets/media/13.jpg" alt="<?php echo __('equipment_13'); ?>">
                     <div>
-                        <strong>13.</strong> Пневматична машина тип Къртица
+                        <strong>13.</strong> <?php echo __('equipment_13'); ?>
                     </div>
                 </div>
                 <div>
-                    <img src="https://img.forconstructionpros.com/files/base/acbm/fcp/image/2020/08/Atlas_Copco_XAS_950_large_air_low_pressure_compressor___Original.5f287f1a0f1dc.5f287f6710709.png?auto=format%2Ccompress&q=70&rect=117%2C204%2C1701%2C954&w=400" alt="Компресор">
+                    <img src="https://img.forconstructionpros.com/files/base/acbm/fcp/image/2020/08/Atlas_Copco_XAS_950_large_air_low_pressure_compressor___Original.5f287f1a0f1dc.5f287f6710709.png?auto=format%2Ccompress&q=70&rect=117%2C204%2C1701%2C954&w=400" alt="<?php echo __('equipment_14'); ?>">
                     <div>
-                        <strong>14.</strong> Компресор
+                        <strong>14.</strong> <?php echo __('equipment_14'); ?>
                     </div>
                 </div>
                 <div>
-                    <img src="https://royalalliancesteel.com/wp-content/uploads/2022/04/shop1.jpg" alt="Агрегат">
+                    <img src="https://royalalliancesteel.com/wp-content/uploads/2022/04/shop1.jpg" alt="<?php echo __('equipment_15'); ?>">
                     <div>
-                        <strong>15.</strong> Агрегат
+                        <strong>15.</strong> <?php echo __('equipment_15'); ?>
                     </div>
                 </div>
                 <div>
-                    <img src="assets/media/16.png" alt="Трамбовки">
+                    <img src="assets/media/16.png" alt="<?php echo __('equipment_16'); ?>">
                     <div>
-                        <strong>16.</strong> Трамбовки
+                        <strong>16.</strong> <?php echo __('equipment_16'); ?>
                     </div>
                 </div>
                 <div>
-                    <img src="https://masterhire.com.au/wp-content/uploads/2020/06/AJ90.jpg" alt="Къртачи">
+                    <img src="https://masterhire.com.au/wp-content/uploads/2020/06/AJ90.jpg" alt="<?php echo __('equipment_17'); ?>">
                     <div>
-                        <strong>17.</strong> Къртачи
+                        <strong>17.</strong> <?php echo __('equipment_17'); ?>
                     </div>
                 </div>
                 <div>
-                    <img src="https://caykentools.com/wp-content/uploads/2021/01/Dk-450-1-1-scaled.jpg" alt="Боркорона">
+                    <img src="https://caykentools.com/wp-content/uploads/2021/01/Dk-450-1-1-scaled.jpg" alt="<?php echo __('equipment_18'); ?>">
                     <div>
-                        <strong>18.</strong> Боркорона
+                        <strong>18.</strong> <?php echo __('equipment_18'); ?>
                     </div>
                 </div>
                 <div>
-                    <img src="assets/media/19.jpg" alt="Струг">
+                    <img src="assets/media/19.jpg" alt="<?php echo __('equipment_19'); ?>">
                     <div>
-                        <strong>19.</strong> Струг
+                        <strong>19.</strong> <?php echo __('equipment_19'); ?>
                     </div>
                 </div>
                 <div>
-                    <img src="assets/media/20.jpg" alt="Други инструменти">
+                    <img src="assets/media/20.jpg" alt="<?php echo __('equipment_20'); ?>">
                     <div>
-                        <strong>20.</strong> Други инструменти
+                        <strong>20.</strong> <?php echo __('equipment_20'); ?>
                     </div>
                 </div>
                 <div>
-                    <img src="assets/media/21.jpg" alt="Фреза за канали">
+                    <img src="assets/media/21.jpg" alt="<?php echo __('equipment_21'); ?>">
                     <div>
-                        <strong>21.</strong> Фреза за канали – без прахова
+                        <strong>21.</strong> <?php echo __('equipment_21'); ?>
                     </div>
                 </div>
             </div>
