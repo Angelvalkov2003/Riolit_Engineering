@@ -59,9 +59,9 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1600px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 60px;
   width: 100%;
   overflow-x: hidden;
 }
@@ -780,10 +780,10 @@ section {
 
 .quality-item {
   background: var(--white);
-  padding: 2rem;
-  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(26, 84, 144, 0.12);
+  border: 2px solid rgba(26, 84, 144, 0.1);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
@@ -795,21 +795,39 @@ section {
   top: 0;
   left: 0;
   right: 0;
-  height: 3px;
-  background: var(--primary-color);
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), var(--text-dark));
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.4s ease;
 }
 
+.quality-item::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(26, 84, 144, 0.05) 0%, transparent 70%);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
 .quality-item:hover {
   border-color: var(--primary-color);
-  box-shadow: 0 8px 30px rgba(26, 84, 144, 0.2);
-  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(26, 84, 144, 0.25);
+  transform: translateY(-8px) scale(1.02);
+  background: linear-gradient(135deg, #ffffff 0%, #fafbfc 100%);
 }
 
 .quality-item:hover::before {
   transform: scaleX(1);
+}
+
+.quality-item:hover::after {
+  opacity: 1;
 }
 
 .quality-item h3 {
@@ -818,10 +836,14 @@ section {
   color: var(--text-dark);
   font-weight: 600;
   line-height: 1.4;
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
 }
 
 .quality-item:hover h3 {
   color: var(--primary-color);
+  transform: translateX(5px);
 }
 
 .quality-item p {
@@ -829,6 +851,13 @@ section {
   line-height: 1.7;
   font-size: 16px;
   font-weight: 400;
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+.quality-item:hover p {
+  color: var(--text-medium);
 }
 
 /* VALSIR Representative Section */
@@ -1242,9 +1271,9 @@ section {
 
 /* Page Content */
 .page-content {
-  max-width: 900px;
+  max-width: 1600px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 40px 60px;
 }
 
 .page-header {
@@ -1255,10 +1284,24 @@ section {
 .page-header h1 {
   font-size: 48px;
   margin-bottom: 1rem;
-  color: var(--text-dark);
+  color: var(--primary-color);
   font-weight: 700;
   letter-spacing: -0.5px;
   line-height: 1.2;
+}
+
+.about-detail h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.3px;
+  line-height: 1.3;
+}
+
+.about-detail h2:first-of-type {
+  margin-top: 0;
 }
 
 .page-header p {
@@ -1985,5 +2028,64 @@ button {
 
   [style*="margin-top: 4rem"] {
     margin-top: 2rem !important;
+  }
+}
+
+/* Equipment Grid */
+.equipment-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.equipment-grid > div {
+  background: var(--white);
+  padding: 0;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  border: 1px solid rgba(26, 84, 144, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.equipment-grid > div:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.equipment-grid img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.equipment-grid > div > div {
+  padding: 1rem;
+}
+
+@media (max-width: 768px) {
+  .equipment-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .equipment-grid img {
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .equipment-grid {
+    gap: 0.75rem;
+  }
+  
+  .equipment-grid img {
+    height: 120px;
+  }
+  
+  .equipment-grid > div > div {
+    padding: 0.75rem;
   }
 }

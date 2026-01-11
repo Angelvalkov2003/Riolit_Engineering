@@ -82,7 +82,7 @@ $texts = [
         // Quality
         'quality_materials' => 'Висококачествени материали',
         'quality_materials_desc' => 'Работим само с висококачествени и иновативни материали, които гарантират дълготрайност и надеждност.',
-        'quality_team' => 'Професионален екип',
+        'quality_team' => 'Лицензиран екип',
         'quality_team_desc' => 'Екипът ни е от високо-квалифицирани професионалисти с дългогодишен опит в строителството.',
         'quality_innovative' => 'Иновативни решения',
         'quality_innovative_desc' => 'Предлагаме иновативни решения и най-новите приложения в областта на строителството.',
@@ -142,7 +142,7 @@ $texts = [
         // Quality
         'quality_materials' => 'High-Quality Materials',
         'quality_materials_desc' => 'We work only with high-quality and innovative materials that guarantee durability and reliability.',
-        'quality_team' => 'Professional Team',
+        'quality_team' => 'Licensed Team',
         'quality_team_desc' => 'Our team consists of highly qualified professionals with years of experience in construction.',
         'quality_innovative' => 'Innovative Solutions',
         'quality_innovative_desc' => 'We offer innovative solutions and the latest applications in the field of construction.',
