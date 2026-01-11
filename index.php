@@ -136,81 +136,89 @@ include 'includes/header.php';
     <section class="brand-carousel-section">
         <div class="container">
             <h2 class="brand-carousel-title"><?php echo __('section_partners'); ?></h2>
-            <div class="brand-carousel-wrapper">
-                <button class="carousel-btn carousel-btn-prev" aria-label="Previous">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
-                <div class="brand-carousel-container">
-                    <div class="brand-carousel-track">
-                        <!-- Duplicate items at the end for infinite loop -->
-                        <div class="brand-item" data-clone="end">
-                            <img src="partners/aco.png" alt="ACO" class="brand-logo">
-                        </div>
-                        <div class="brand-item" data-clone="end">
-                            <img src="partners/argogroup.jpg" alt="Argo Group" class="brand-logo">
-                        </div>
-                        <div class="brand-item brand-item-ataro" data-clone="end">
-                            <img src="partners/ataro.png" alt="ATARO" class="brand-logo brand-logo-ataro">
-                        </div>
-                        <!-- Original items -->
-                        <div class="brand-item">
-                            <img src="partners/aco.png" alt="ACO" class="brand-logo">
-                        </div>
-                        <div class="brand-item">
-                            <img src="partners/argogroup.jpg" alt="Argo Group" class="brand-logo">
-                        </div>
-                        <div class="brand-item brand-item-ataro">
-                            <img src="partners/ataro.png" alt="ATARO" class="brand-logo brand-logo-ataro">
-                        </div>
-                        <div class="brand-item">
-                            <img src="partners/barage_group.png" alt="Barage Group" class="brand-logo">
-                        </div>
-                        <div class="brand-item brand-item-decatrade">
-                            <img src="partners/decatrade.jpg" alt="Decatrade" class="brand-logo brand-logo-decatrade">
-                        </div>
-                        <div class="brand-item">
-                            <img src="partners/glavbolgarstroy.avif" alt="Главболгарстрой" class="brand-logo">
-                        </div>
-                        <div class="brand-item">
-                            <img src="partners/hauraton.jpg" alt="Hauraton" class="brand-logo">
-                        </div>
-                        <div class="brand-item">
-                            <img src="partners/HMC.png" alt="HMC" class="brand-logo">
-                        </div>
-                        <div class="brand-item">
-                            <img src="partners/HydroPro.png" alt="HydroPro" class="brand-logo">
-                        </div>
-                        <div class="brand-item">
-                            <img src="partners/isa-2000.png" alt="ISA 2000" class="brand-logo">
-                        </div>
-                        <div class="brand-item">
-                            <img src="partners/multikom.jpg" alt="Multikom" class="brand-logo">
-                        </div>
-                        <div class="brand-item">
-                            <img src="partners/strabag.png" alt="Strabag" class="brand-logo">
-                        </div>
-                        <div class="brand-item">
-                            <img src="partners/artstroismolian.png" alt="Artstroi Smolian" class="brand-logo">
-                        </div>
-                        <!-- Duplicate items at the beginning for infinite loop -->
-                        <div class="brand-item" data-clone="start">
-                            <img src="partners/aco.png" alt="ACO" class="brand-logo">
-                        </div>
-                        <div class="brand-item" data-clone="start">
-                            <img src="partners/argogroup.jpg" alt="Argo Group" class="brand-logo">
-                        </div>
-                        <div class="brand-item brand-item-ataro" data-clone="start">
-                            <img src="partners/ataro.png" alt="ATARO" class="brand-logo brand-logo-ataro">
-                        </div>
+            <div class="brand-carousel-container">
+                <div class="brand-carousel-track">
+                    <!-- First set of brands -->
+                    <div class="brand-item">
+                        <img src="partners/aco.png" alt="ACO" class="brand-logo">
+                    </div>
+                    <div class="brand-item">
+                        <img src="partners/argogroup.jpg" alt="Argo Group" class="brand-logo">
+                    </div>
+                    <div class="brand-item brand-item-ataro">
+                        <img src="partners/ataro.png" alt="ATARO" class="brand-logo brand-logo-ataro">
+                    </div>
+                    <div class="brand-item brand-item-barage">
+                        <img src="partners/barage_group.png" alt="Barage Group" class="brand-logo brand-logo-barage">
+                    </div>
+                    <div class="brand-item brand-item-decatrade">
+                        <img src="partners/decatrade.jpg" alt="Decatrade" class="brand-logo brand-logo-decatrade">
+                    </div>
+                    <div class="brand-item brand-item-glavbolgarstroy">
+                        <img src="partners/glavbolgarstroy.avif" alt="Главболгарстрой" class="brand-logo brand-logo-glavbolgarstroy">
+                    </div>
+                    <div class="brand-item brand-item-hauraton">
+                        <img src="partners/hauraton.jpg" alt="Hauraton" class="brand-logo brand-logo-hauraton">
+                    </div>
+                    <div class="brand-item brand-item-hmc">
+                        <img src="partners/HMC.png" alt="HMC" class="brand-logo brand-logo-hmc">
+                    </div>
+                    <div class="brand-item">
+                        <img src="partners/HydroPro.png" alt="HydroPro" class="brand-logo">
+                    </div>
+                    <div class="brand-item">
+                        <img src="partners/isa-2000.png" alt="ISA 2000" class="brand-logo">
+                    </div>
+                    <div class="brand-item">
+                        <img src="partners/multikom.jpg" alt="Multikom" class="brand-logo">
+                    </div>
+                    <div class="brand-item">
+                        <img src="partners/strabag.png" alt="Strabag" class="brand-logo">
+                    </div>
+                    <div class="brand-item">
+                        <img src="partners/artstroismolian.png" alt="Artstroi Smolian" class="brand-logo">
+                    </div>
+                    <!-- Duplicate set for seamless infinite loop -->
+                    <div class="brand-item">
+                        <img src="partners/aco.png" alt="ACO" class="brand-logo">
+                    </div>
+                    <div class="brand-item">
+                        <img src="partners/argogroup.jpg" alt="Argo Group" class="brand-logo">
+                    </div>
+                    <div class="brand-item brand-item-ataro">
+                        <img src="partners/ataro.png" alt="ATARO" class="brand-logo brand-logo-ataro">
+                    </div>
+                    <div class="brand-item brand-item-barage">
+                        <img src="partners/barage_group.png" alt="Barage Group" class="brand-logo brand-logo-barage">
+                    </div>
+                    <div class="brand-item brand-item-decatrade">
+                        <img src="partners/decatrade.jpg" alt="Decatrade" class="brand-logo brand-logo-decatrade">
+                    </div>
+                    <div class="brand-item brand-item-glavbolgarstroy">
+                        <img src="partners/glavbolgarstroy.avif" alt="Главболгарстрой" class="brand-logo brand-logo-glavbolgarstroy">
+                    </div>
+                    <div class="brand-item brand-item-hauraton">
+                        <img src="partners/hauraton.jpg" alt="Hauraton" class="brand-logo brand-logo-hauraton">
+                    </div>
+                    <div class="brand-item brand-item-hmc">
+                        <img src="partners/HMC.png" alt="HMC" class="brand-logo brand-logo-hmc">
+                    </div>
+                    <div class="brand-item">
+                        <img src="partners/HydroPro.png" alt="HydroPro" class="brand-logo">
+                    </div>
+                    <div class="brand-item">
+                        <img src="partners/isa-2000.png" alt="ISA 2000" class="brand-logo">
+                    </div>
+                    <div class="brand-item">
+                        <img src="partners/multikom.jpg" alt="Multikom" class="brand-logo">
+                    </div>
+                    <div class="brand-item">
+                        <img src="partners/strabag.png" alt="Strabag" class="brand-logo">
+                    </div>
+                    <div class="brand-item">
+                        <img src="partners/artstroismolian.png" alt="Artstroi Smolian" class="brand-logo">
                     </div>
                 </div>
-                <button class="carousel-btn carousel-btn-next" aria-label="Next">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
             </div>
         </div>
     </section>
