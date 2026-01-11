@@ -33,97 +33,97 @@ include 'includes/header.php';
                     </div>
                 </div>
                 <div>
-                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400" alt="Комбиниран багер Caterpillar 432E">
+                    <img src="assets/media/cat_432e.jpg" alt="Комбиниран багер Caterpillar 432E">
                     <div>
                         <strong>2.</strong> Комбиниран багер Caterpillar 432E
                     </div>
                 </div>
                 <div>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Komatsu_PC10_MR-1%2C_mini_excavator_1_ton%2C_yellow.jpeg" alt="Мини багер Komatsu">
+                    <img src="https://www.komatsu.eu/-/media/projects/komatsu/category-banner/miniexcavators.ashx?rev=2ac44d1f4d0c450c9ba1217645acf5ab" alt="Мини багер Komatsu">
                     <div>
                         <strong>3.</strong> Мини багер Komatsu с кофа 1 м³ с кофа 40, 60 и 90 см. – 2 бр
                     </div>
                 </div>
                 <div>
-                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400" alt="Бобкат">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Bobcat_S650_skid_steer_loader_%2815084521732%29.jpg" alt="Бобкат">
                     <div>
                         <strong>4.</strong> Бобкат
                     </div>
                 </div>
                 <div>
-                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400" alt="Самосвал 4-осен MAN">
+                    <img src="https://en.maz-man.by/wp-content/uploads/2023/03/sam6x4_1.jpg" alt="Самосвал 4-осен MAN">
                     <div>
                         <strong>5.</strong> Самосвал 4-осен MAN, 17 t - 2 бр
                     </div>
                 </div>
                 <div>
-                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400" alt="Самосвал 3-осен Mercedes">
+                    <img src="https://www.scaleart-shop.de/media/image/47/91/f6/SK_3Achs_Hinterkipper01toxHW4vkXgAjI_600x600.png" alt="Самосвал 3-осен Mercedes">
                     <div>
                         <strong>6.</strong> Самосвал 3-осен Mercedes, 14 t
                     </div>
                 </div>
                 <div>
-                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400" alt="Самосвал Mercedes 4t">
+                    <img src="https://image.made-in-china.com/203f0j00hkwlvbQPnepW/Dump-Trucks-4-Ton-in-Good-Condition-Mercedes-Tipper-Dump-Truckr-Sale.webp" alt="Самосвал Mercedes 4t">
                     <div>
                         <strong>7.</strong> Самосвал Mercedes 4t
                     </div>
                 </div>
                 <div>
-                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400" alt="Валяк 12 t">
+                    <img src="https://www.road-constructionmachinery.com/photo/pl188849790-grade_ability_35_12_ton_xd123_double_drum_vibratory_road_roller.jpg" alt="Валяк 12 t">
                     <div>
                         <strong>8.</strong> Валяк 12 t
                     </div>
                 </div>
                 <div>
-                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400" alt="Дизелово Ножична Вишка 18м">
+                    <img src="https://smithshire.com/wp-content/uploads/2021/12/Dingli-JCPT-1823RT-600x600-1.jpg" alt="Дизелово Ножична Вишка 18м">
                     <div>
                         <strong>9.</strong> Дизелово Ножична Вишка 18м
                     </div>
                 </div>
                 <div>
-                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400" alt="Машина за челно заваряване">
+                    <img src="https://image.made-in-china.com/202f0j00WBuiMDbhHIYq/90mm-to-315mm-HDPE-Butt-Fusion-Welding-Machine.webp" alt="Машина за челно заваряване">
                     <div>
                         <strong>10.</strong> Машина за челно заваряване – 5 бр
                     </div>
                 </div>
                 <div>
-                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400" alt="Машина за Електро заваряване">
+                    <img src="https://evopipes.lv/storage/images/cache/3e02af6d3adb000431a1d2e007a04e1a34badbfe/3e02af6d3adb000431a1d2e007a04e1a34badbfe_product_full.png" alt="Машина за Електро заваряване">
                     <div>
                         <strong>11.</strong> Машина за Електро заваряване ф 40 – ф 500 (дифузно) 1 вид
                     </div>
                 </div>
                 <div>
-                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400" alt="Машина за Електро заваряване">
+                    <img src="assets/media/type2.jpg" alt="Машина за Електро заваряване">
                     <div>
                         <strong>12.</strong> Машина за Електро заваряване (дифузно) 2 вид
                     </div>
                 </div>
                 <div>
-                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400" alt="Пневматична машина тип Къртица">
+                    <img src="assets/media/13.jpg" alt="Пневматична машина тип Къртица">
                     <div>
                         <strong>13.</strong> Пневматична машина тип Къртица
                     </div>
                 </div>
                 <div>
-                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400" alt="Компресор">
+                    <img src="https://img.forconstructionpros.com/files/base/acbm/fcp/image/2020/08/Atlas_Copco_XAS_950_large_air_low_pressure_compressor___Original.5f287f1a0f1dc.5f287f6710709.png?auto=format%2Ccompress&q=70&rect=117%2C204%2C1701%2C954&w=400" alt="Компресор">
                     <div>
                         <strong>14.</strong> Компресор
                     </div>
                 </div>
                 <div>
-                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400" alt="Агрегат">
+                    <img src="https://royalalliancesteel.com/wp-content/uploads/2022/04/shop1.jpg" alt="Агрегат">
                     <div>
                         <strong>15.</strong> Агрегат
                     </div>
                 </div>
                 <div>
-                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400" alt="Трамбовки">
+                    <img src="assets/media/16.png" alt="Трамбовки">
                     <div>
                         <strong>16.</strong> Трамбовки
                     </div>
                 </div>
                 <div>
-                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400" alt="Къртачи">
+                    <img src="https://masterhire.com.au/wp-content/uploads/2020/06/AJ90.jpg" alt="Къртачи">
                     <div>
                         <strong>17.</strong> Къртачи
                     </div>
