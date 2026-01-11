@@ -119,14 +119,35 @@ include 'includes/header.php';
                     <h3><?php echo __('quality_european'); ?></h3>
                     <p><?php echo __('quality_european_desc'); ?></p>
                 </div>
-                <div class="quality-item">
-                    <h3><?php echo __('quality_representative'); ?></h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- VALSIR Representative Section -->
+    <section class="valsir-section">
+        <div class="container">
+            <div class="valsir-content">
+                <div class="valsir-image">
+                    <img src="Valsir.png" alt="VALSIR S.p.A" style="max-width: 300px; width: 100%; height: auto; display: block;">
+                </div>
+                <div class="valsir-text">
+                    <h2><?php echo __('quality_representative'); ?></h2>
                     <p><?php echo __('quality_representative_desc'); ?></p>
                 </div>
-                <div class="quality-item">
-                    <h3><?php echo __('quality_chamber'); ?></h3>
-                    <img src="medal.jpg" alt="Член на КАМАРАТА НА СТРОИТЕЛИТЕ В БЪЛГАРИЯ" style="max-width: 200px; width: 100%; height: auto; margin: 1rem 0; display: block;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Chamber Member Section -->
+    <section class="chamber-section">
+        <div class="container">
+            <div class="chamber-content">
+                <div class="chamber-text">
+                    <h2><?php echo __('quality_chamber'); ?></h2>
                     <p><?php echo __('quality_chamber_desc'); ?></p>
+                </div>
+                <div class="chamber-image">
+                    <img src="medal.png" alt="Член на КАМАРАТА НА СТРОИТЕЛИТЕ В БЪЛГАРИЯ" style="max-width: 250px; width: 100%; height: auto; display: block;">
                 </div>
             </div>
         </div>

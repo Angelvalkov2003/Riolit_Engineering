@@ -97,7 +97,7 @@ include 'includes/header.php';
 
             <h2>Членство и партньорства</h2>
             <div style="display: flex; align-items: center; gap: 2rem; margin: 2rem 0; flex-wrap: wrap;">
-                <img src="medal.jpg" alt="Член на КАМАРАТА НА СТРОИТЕЛИТЕ В БЪЛГАРИЯ" style="max-width: 250px; width: 100%; height: auto; border-radius: 8px; box-shadow: var(--shadow);">
+                <img src="medal.png" alt="Член на КАМАРАТА НА СТРОИТЕЛИТЕ В БЪЛГАРИЯ" style="max-width: 250px; width: 100%; height: auto; border-radius: 8px; box-shadow: var(--shadow);">
                 <div>
                     <p><strong>Член на КАМАРАТА НА СТРОИТЕЛИТЕ В БЪЛГАРИЯ</strong></p>
                 </div>

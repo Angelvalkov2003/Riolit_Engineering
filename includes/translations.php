@@ -89,9 +89,9 @@ $texts = [
         'quality_european' => 'Европейски проекти',
         'quality_european_desc' => 'Участваме в водещи инфраструктурни проекти, реализирани по Европейски програми и частни инвестиции.',
         'quality_representative' => 'Официален представител',
-        'quality_representative_desc' => 'Официален представител на VALSIR S.p.A, Италия за система за вакуумно отводняване на плоски покриви – RAIN PLUS ©',
+        'quality_representative_desc' => 'Риолит Инженеринг ЕООД е официален представител на VALSIR S.p.A, Италия за иновативната система за вакуумно отводняване на плоски покриви – RAIN PLUS ©. Като ексклузивен партньор на водещ италиански производител, ние предлагаме най-модерните решения за отводняване на плоски покриви, които гарантират надеждност, ефективност и дълготрайност. Системата RAIN PLUS © е иновативна технология, която осигурява оптимално отводняване и защита на покривните конструкции.',
         'quality_chamber' => 'Член на Камарата',
-        'quality_chamber_desc' => 'Член на КАМАРАТА НА СТРОИТЕЛИТЕ В БЪЛГАРИЯ',
+        'quality_chamber_desc' => 'Риолит Инженеринг ЕООД е официален член на КАМАРАТА НА СТРОИТЕЛИТЕ В БЪЛГАРИЯ. Нашето членство гарантира спазване на високи професионални стандарти, етични норми и най-добри практики в строителната индустрия. Чрез нашето участие в камарата ние демонстрираме ангажимент към качество, прозрачност и професионализъм във всички наши проекти.',
         
         // Stats
         'stat_projects' => 'Завършени проекти',
@@ -149,9 +149,9 @@ $texts = [
         'quality_european' => 'European Projects',
         'quality_european_desc' => 'We participate in leading infrastructure projects implemented under European programs and private investments.',
         'quality_representative' => 'Official Representative',
-        'quality_representative_desc' => 'Official representative of VALSIR S.p.A, Italy for vacuum drainage system for flat roofs – RAIN PLUS ©',
+        'quality_representative_desc' => 'Riolit Engineering Ltd. is the official representative of VALSIR S.p.A, Italy for the innovative vacuum drainage system for flat roofs – RAIN PLUS ©. As an exclusive partner of a leading Italian manufacturer, we offer the most modern solutions for flat roof drainage that guarantee reliability, efficiency and durability. The RAIN PLUS © system is an innovative technology that ensures optimal drainage and protection of roof structures.',
         'quality_chamber' => 'Chamber Member',
-        'quality_chamber_desc' => 'Member of the CHAMBER OF BUILDERS IN BULGARIA',
+        'quality_chamber_desc' => 'Riolit Engineering Ltd. is an official member of the CHAMBER OF BUILDERS IN BULGARIA. Our membership guarantees adherence to high professional standards, ethical norms and best practices in the construction industry. Through our participation in the chamber, we demonstrate commitment to quality, transparency and professionalism in all our projects.',
         
         // Stats
         'stat_projects' => 'Completed Projects',
