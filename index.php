@@ -33,14 +33,14 @@ include 'includes/header.php';
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <img src="https://www.buildmyinfra.com/img/services/mep.jpg" alt="<?php echo __('service_installation'); ?>" loading="lazy">
+                        <img src="assets/media/montajni_uslugi.webp" alt="<?php echo __('service_installation'); ?>" loading="lazy">
                     </div>
                     <h3><?php echo __('service_installation'); ?></h3>
                     <p><?php echo __('service_installation_desc'); ?></p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <img src="https://insideclimatenews.org/wp-content/uploads/2023/09/Watermainbreak-scaled.jpeg" alt="<?php echo __('service_water'); ?>" loading="lazy">
+                        <img src="https://www.gic.si/storage/app/media/work-area-road-repair-sewer-repairs-tubes-ground-2023-11-27-04-59-12-utc.jpg" alt="<?php echo __('service_water'); ?>" loading="lazy">
                     </div>
                     <h3><?php echo __('service_water'); ?></h3>
                     <p><?php echo __('service_water_desc'); ?></p>
