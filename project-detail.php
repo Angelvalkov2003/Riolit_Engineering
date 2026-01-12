@@ -38,19 +38,27 @@ $project_details = isset($project['details_text'][$current_lang]) ? $project['de
                         $lines = explode("\n", $text);
                         $formatted = '';
                         $in_list = false;
+                        $prev_was_empty = false;
+                        $first_line = true;
                         
                         foreach ($lines as $line) {
                             $line = trim($line);
                             
-                            // Empty line
+                            // Empty line - игнорираме последователните празни редове
                             if (empty($line)) {
                                 if ($in_list) {
                                     $formatted .= '</ul>';
                                     $in_list = false;
                                 }
-                                $formatted .= '<br>';
+                                // Добавяме само един празен ред между секциите
+                                if (!$prev_was_empty) {
+                                    $formatted .= '<br>';
+                                    $prev_was_empty = true;
+                                }
                                 continue;
                             }
+                            
+                            $prev_was_empty = false;
                             
                             // Check if line is a heading (short line, all caps or ends with :)
                             if ((strlen($line) < 80 && preg_match('/^[А-ЯA-Z\s\-–]+:?$/u', $line)) || 
@@ -60,6 +68,7 @@ $project_details = isset($project['details_text'][$current_lang]) ? $project['de
                                     $in_list = false;
                                 }
                                 $formatted .= '<h4 class="project-text-heading">' . htmlspecialchars($line) . '</h4>';
+                                $first_line = false;
                             }
                             // Check if line is a list item (starts with -)
                             elseif (preg_match('/^[-•]\s+(.+)$/u', $line, $matches)) {
@@ -68,6 +77,7 @@ $project_details = isset($project['details_text'][$current_lang]) ? $project['de
                                     $in_list = true;
                                 }
                                 $formatted .= '<li>' . htmlspecialchars($matches[1]) . '</li>';
+                                $first_line = false;
                             }
                             // Regular paragraph
                             else {
@@ -76,6 +86,7 @@ $project_details = isset($project['details_text'][$current_lang]) ? $project['de
                                     $in_list = false;
                                 }
                                 $formatted .= '<p>' . htmlspecialchars($line) . '</p>';
+                                $first_line = false;
                             }
                         }
                         
@@ -87,10 +98,38 @@ $project_details = isset($project['details_text'][$current_lang]) ? $project['de
                     }
                     
                     $text = $project_details;
+                    
+                    // Разделяме текста на редове и броим думите
                     $lines = explode("\n", $text);
-                    $preview_lines = array_slice($lines, 0, 8);
-                    $has_more = count($lines) > 8;
+                    $preview_word_limit = 60;
+                    $word_count = 0;
+                    $preview_lines = [];
+                    
+                    // Вземаме редовете до 60-та дума, запазвайки структурата
+                    foreach ($lines as $line) {
+                        $line_words = preg_split('/\s+/', trim($line), -1, PREG_SPLIT_NO_EMPTY);
+                        $line_word_count = count($line_words);
+                        
+                        if ($word_count + $line_word_count <= $preview_word_limit) {
+                            // Добавяме целия ред
+                            $preview_lines[] = $line;
+                            $word_count += $line_word_count;
+                        } else {
+                            // Добавяме част от реда до 60-та дума
+                            $remaining_words = $preview_word_limit - $word_count;
+                            if ($remaining_words > 0) {
+                                $partial_words = array_slice($line_words, 0, $remaining_words);
+                                $preview_lines[] = implode(' ', $partial_words);
+                            }
+                            break;
+                        }
+                    }
+                    
                     $preview_text = implode("\n", $preview_lines);
+                    
+                    // Проверяваме дали има още текст след preview
+                    $total_words = preg_split('/\s+/', $text, -1, PREG_SPLIT_NO_EMPTY);
+                    $has_more = count($total_words) > $preview_word_limit;
                     ?>
                     <?php if ($has_more): ?>
                     <div class="project-text-preview-wrapper has-more">
