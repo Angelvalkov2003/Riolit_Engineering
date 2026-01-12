@@ -157,13 +157,40 @@ function toggleProjectText() {
     
     if (preview && full && btn) {
         if (full.style.display === 'none') {
+            // Разгъвам текста
             if (previewWrapper) previewWrapper.style.display = 'none';
             full.style.display = 'block';
             btn.textContent = '<?php echo $current_lang === 'bg' ? 'Скрий' : 'Hide'; ?>';
+            
+            // Скролвам до началото на дългия текст
+            requestAnimationFrame(() => {
+                const fullRect = full.getBoundingClientRect();
+                const fullTopPosition = fullRect.top + window.pageYOffset;
+                const headerOffset = 80; // Offset за header
+                
+                window.scrollTo({
+                    top: fullTopPosition - headerOffset,
+                    behavior: 'smooth'
+                });
+            });
         } else {
+            // При скриване скролвам до preview текста
             if (previewWrapper) previewWrapper.style.display = 'block';
             full.style.display = 'none';
             btn.textContent = '<?php echo $current_lang === 'bg' ? 'Покажи още' : 'Show more'; ?>';
+            
+            requestAnimationFrame(() => {
+                if (previewWrapper) {
+                    const previewRect = previewWrapper.getBoundingClientRect();
+                    const previewTopPosition = previewRect.top + window.pageYOffset;
+                    const headerOffset = 80;
+                    
+                    window.scrollTo({
+                        top: previewTopPosition - headerOffset,
+                        behavior: 'smooth'
+                    });
+                }
+            });
         }
     }
 }
