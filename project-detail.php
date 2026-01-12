@@ -162,35 +162,24 @@ function toggleProjectText() {
             full.style.display = 'block';
             btn.textContent = '<?php echo $current_lang === 'bg' ? 'Скрий' : 'Hide'; ?>';
             
-            // Скролвам до началото на дългия текст
-            requestAnimationFrame(() => {
-                const fullRect = full.getBoundingClientRect();
-                const fullTopPosition = fullRect.top + window.pageYOffset;
-                const headerOffset = 80; // Offset за header
+            // Директно телепортиране без анимация до началото на текста
+            const textSection = document.querySelector('.project-details-text-section');
+            if (textSection) {
+                const rect = textSection.getBoundingClientRect();
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                const targetPosition = rect.top + scrollTop - 100; // 100px offset за header
                 
+                // Използвам instant behavior за рязко скролване
                 window.scrollTo({
-                    top: fullTopPosition - headerOffset,
-                    behavior: 'smooth'
+                    top: targetPosition,
+                    behavior: 'instant' // Без анимация!
                 });
-            });
+            }
         } else {
-            // При скриване скролвам до preview текста
+            // При скриване не скролвам
             if (previewWrapper) previewWrapper.style.display = 'block';
             full.style.display = 'none';
             btn.textContent = '<?php echo $current_lang === 'bg' ? 'Покажи още' : 'Show more'; ?>';
-            
-            requestAnimationFrame(() => {
-                if (previewWrapper) {
-                    const previewRect = previewWrapper.getBoundingClientRect();
-                    const previewTopPosition = previewRect.top + window.pageYOffset;
-                    const headerOffset = 80;
-                    
-                    window.scrollTo({
-                        top: previewTopPosition - headerOffset,
-                        behavior: 'smooth'
-                    });
-                }
-            });
         }
     }
 }
