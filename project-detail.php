@@ -92,12 +92,13 @@ $project_details = isset($project['details_text'][$current_lang]) ? $project['de
                     $has_more = count($lines) > 8;
                     $preview_text = implode("\n", $preview_lines);
                     ?>
-                    <div class="project-text-preview-wrapper<?php echo $has_more ? ' has-more' : ''; ?>">
+                    <?php if ($has_more): ?>
+                    <div class="project-text-preview-wrapper has-more">
                         <div class="project-text-preview" id="project-text-preview">
                             <?php echo formatProjectText($preview_text); ?>
                         </div>
+                        <div class="project-text-fade-overlay"></div>
                     </div>
-                    <?php if ($has_more): ?>
                     <div class="project-text-full" id="project-text-full" style="display: none;">
                         <?php echo formatProjectText($text); ?>
                     </div>
@@ -147,6 +148,28 @@ $project_details = isset($project['details_text'][$current_lang]) ? $project['de
     </section>
 </main>
 
+<style>
+.project-text-preview-wrapper {
+    position: relative;
+}
+
+.project-text-preview-wrapper.has-more {
+    position: relative;
+    overflow: hidden;
+}
+
+.project-text-fade-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    background: linear-gradient(to bottom, rgba(245, 245, 245, 0), rgba(245, 245, 245, 1));
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+</style>
+
 <script>
 // Project text toggle
 function toggleProjectText() {
@@ -167,16 +190,15 @@ function toggleProjectText() {
             if (textSection) {
                 const rect = textSection.getBoundingClientRect();
                 const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-                const targetPosition = rect.top + scrollTop - 100; // 100px offset за header
+                const targetPosition = rect.top + scrollTop - 100;
                 
-                // Използвам instant behavior за рязко скролване
                 window.scrollTo({
                     top: targetPosition,
-                    behavior: 'instant' // Без анимация!
+                    behavior: 'instant'
                 });
             }
         } else {
-            // При скриване не скролвам
+            // При скриване показваме preview отново
             if (previewWrapper) previewWrapper.style.display = 'block';
             full.style.display = 'none';
             btn.textContent = '<?php echo $current_lang === 'bg' ? 'Покажи още' : 'Show more'; ?>';
