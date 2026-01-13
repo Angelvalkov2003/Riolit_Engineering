@@ -437,6 +437,161 @@
         "bg": "Дъждовна канализация\n\nИнвеститор: Вилли Елбе – България\nВъзложител: Бараж Констръкшън ЕООД, София\nИзпълнител: РИОЛИТ ИНЖЕНЕРИНГ ЕООД\n\nПериод на изпълнение: май 2018 г.\nСрок на изпълнение: 20 дни\n\nСИСТЕМИ И МАТЕРИАЛИ\n\n- PE – водопровод\n- PP тръби SN8 ф 500\n- PVC тръби\n- Бетонени шахти\n\nОСНОВНИ ПАРАМЕТРИ\n\n- Дължина на тръбите: 250 м",
         "en": "Rainwater sewerage\n\nInvestor: Willy Elbe – Bulgaria\nClient: Barage Construction EOOD, Sofia\nContractor: RIOLIT ENGINEERING EOOD\n\nExecution period: May 2018\nExecution deadline: 20 days\n\nSYSTEMS AND MATERIALS\n\n- PE – water supply\n- PP pipes SN8 ф 500\n- PVC pipes\n- Concrete shafts\n\nMAIN PARAMETERS\n\n- Pipe length: 250 m"
       }
+    },
+    {
+      "slug": "steel-concrete-pipes-roundabout-radinovo",
+      "title": {
+        "bg": "Стомано-Бетонови тръби DN1000 – ново кръгово кръстовище с. Радиново, гр. Пловдив, гл. Изпълнител СИЕНИТ СТРОИТЕЛНА ГРУПА АД",
+        "en": "Steel-Concrete Pipes DN1000 – new roundabout Radinovo, Plovdiv, Main Contractor SIENIT STROITELNA GRUPA AD"
+      },
+      "location": {
+        "bg": "с. Радиново, гр. Пловдив",
+        "en": "Radinovo, Plovdiv, Bulgaria"
+      },
+      "main_image": "assets/media/projects/ObshinaMarica/main.jpg",
+      "images": [
+        "assets/media/projects/ObshinaMarica/main.jpg",
+        "assets/media/projects/ObshinaMarica/IMG_20190813_171404986_HDR.jpg",
+        "assets/media/projects/ObshinaMarica/IMG_20190823_082350516_HDR.jpg",
+        "assets/media/projects/ObshinaMarica/viber_image_2019-07-25_12-08-20.jpg"
+      ],
+      "details_text": {
+        "bg": "Изграждане на монолитни шахти и стомано-бетонови тръби DN1000\n\nИнвеститор: общ. Марица\nВъзложител: Сиенит\nИзпълнител: РИОЛИТ ИНЖЕНЕРИНГ ЕООД\nПроизводител на бетонни тръби: СБКИ АД\n\nПериод на изпълнение: юли – септември 2019 г.\nСрок на изпълнение: 60 дни\n\nОСНОВНИ ПАРАМЕТРИ\n\n- Дължина на тръбите: 300 м\n- Брой монолитни шахти: 10 бр.\n- Диаметър на тръбите: DN1000",
+        "en": "Construction of monolithic shafts and steel-concrete pipes DN1000\n\nInvestor: Maritsa Municipality\nClient: Sienit\nContractor: RIOLIT ENGINEERING EOOD\nConcrete pipe manufacturer: SBKI AD\n\nExecution period: July – September 2019\nExecution deadline: 60 days\n\nMAIN PARAMETERS\n\n- Pipe length: 300 m\n- Number of monolithic shafts: 10 pcs.\n- Pipe diameter: DN1000"
+      }
+    },
+    {
+      "slug": "water-cycle-gypsovo",
+      "title": {
+        "bg": "Воден цикъл с. Гипсово, общ. Раднево",
+        "en": "Water cycle in Gypsovo, Radnevo Municipality"
+      },
+      "location": {
+        "bg": "с. Гипсово, общ. Раднево",
+        "en": "Gypsovo, Radnevo Municipality"
+      },
+      "main_image": "assets/media/projects/GipsovoRadinovo/main.jpg",
+      "images": [
+        "assets/media/projects/GipsovoRadinovo/main.jpg",
+        "assets/media/projects/GipsovoRadinovo/2014-08-13-044.jpg",
+        "assets/media/projects/GipsovoRadinovo/IMAG1437.jpg",
+        "assets/media/projects/GipsovoRadinovo/IMAG1770.jpg"
+      ],
+      "details_text": {
+        "bg": "",
+        "en": ""
+      }
+    },
+    {
+      "slug": "montevideo-boulevard-sofia",
+      "title": {
+        "bg": "бул. Монтевидео, гр. София, гл. Изпълнител Трейс Груп Холд АД",
+        "en": "Montevideo Boulevard, Sofia, Main Contractor Trace Group Hold AD"
+      },
+      "location": {
+        "bg": "гр. София",
+        "en": "Sofia, Bulgaria"
+      },
+      "main_image": "assets/media/projects/TraceGrupHolding/main.jpg",
+      "images": [
+        "assets/media/projects/TraceGrupHolding/main.jpg",
+        "assets/media/projects/TraceGrupHolding/IMG_20170809_141403.jpg",
+        "assets/media/projects/TraceGrupHolding/IMG_20170812_103331.jpg",
+        "assets/media/projects/TraceGrupHolding/IMG_20170828_183050.jpg"
+      ],
+      "details_text": {
+        "bg": "",
+        "en": ""
+      }
+    },
+    {
+      "slug": "mekalit-kukov-internal-installations",
+      "title": {
+        "bg": "Вътрешни инсталации Мекалит и Куков 1",
+        "en": "Internal installations Mekalit and Kukov 1"
+      },
+      "location": {
+        "bg": "",
+        "en": ""
+      },
+      "main_image": "assets/media/projects/mekalik/main.jpg",
+      "images": [
+        "assets/media/projects/mekalik/main.jpg",
+        "assets/media/projects/mekalik/IMG_20190709_150759766.jpg",
+        "assets/media/projects/mekalik/IMG_20190709_153421189.jpg",
+        "assets/media/projects/mekalik/IMG_20190806_123035832.jpg",
+        "assets/media/projects/mekalik/IMG_20190812_135646771.jpg"
+      ],
+      "details_text": {
+        "bg": "",
+        "en": ""
+      }
+    },
+    {
+      "slug": "sewerage-natalia-boryana-smolyan",
+      "title": {
+        "bg": "Канализация – ул. Наталия и ул. Боряна, гр. Смолян",
+        "en": "Sewerage – Natalia and Boryana Streets, Smolyan"
+      },
+      "location": {
+        "bg": "гр. Смолян",
+        "en": "Smolyan, Bulgaria"
+      },
+      "main_image": "assets/media/projects/Smolyan/main.jpg",
+      "images": [
+        "assets/media/projects/Smolyan/main.jpg",
+        "assets/media/projects/Smolyan/IMG_20161109_121315.jpg",
+        "assets/media/projects/Smolyan/IMG_20161111_093050.jpg",
+        "assets/media/projects/Smolyan/IMG_20161210_121146.jpg"
+      ],
+      "details_text": {
+        "bg": "Канализация\n\nИнвеститор: Община Смолян\n\nПериод на изпълнение: октомври – декември 2016 г.",
+        "en": "Sewerage\n\nInvestor: Smolyan Municipality\n\nExecution period: October – December 2016"
+      }
+    },
+    {
+      "slug": "universal-logistic-park-sofia",
+      "title": {
+        "bg": "Вакуумна инсталация за отводняване на плосък покрив – Логистичен парк Юнивърсъл, гр. София",
+        "en": "Vacuum installation for flat roof drainage – Universal Logistic Park, Sofia"
+      },
+      "location": {
+        "bg": "бул. Цариградско шосе №425, гр. София",
+        "en": "Tsarigradsko Shose Blvd. No. 425, Sofia, Bulgaria"
+      },
+      "main_image": "assets/media/projects/Universal/main.jpg",
+      "images": [
+        "assets/media/projects/Universal/main.jpg",
+        "assets/media/projects/Universal/IMG_20161012_094134.jpg",
+        "assets/media/projects/Universal/IMG_20161117_163024.jpg",
+        "assets/media/projects/Universal/IMG_20161129_141434.jpg"
+      ],
+      "details_text": {
+        "bg": "Вакуумна инсталация за отводняване на плосък покрив\n\nИнвеститор: МДЛ Сервиз\nВъзложител: Мико - Д ООД\nИзпълнител: РИОЛИТ ИНЖЕНЕРИНГ ЕООД\nСистема: VALSIR, Италия\n\nПериод на изпълнение: септември – декември 2016 г.\nСрок на изпълнение: 40 дни\n\nОСНОВНИ ПАРАМЕТРИ\n\n- Площ на покрива: 4 000 м²\n- Дължина на тръбите: 350 м\n- Брой воронки: 18 бр.",
+        "en": "Vacuum installation for flat roof drainage\n\nInvestor: MDL Service\nClient: Miko - D OOD\nContractor: RIOLIT ENGINEERING EOOD\nSystem: VALSIR, Italy\n\nExecution period: September – December 2016\nExecution deadline: 40 days\n\nMAIN PARAMETERS\n\n- Roof area: 4,000 m²\n- Pipe length: 350 m\n- Number of funnels: 18 pcs."
+      }
+    },
+    {
+      "slug": "badger-v-skf",
+      "title": {
+        "bg": "Badger v SKF",
+        "en": "Badger v SKF"
+      },
+      "location": {
+        "bg": "",
+        "en": ""
+      },
+      "main_image": "assets/media/projects/Badger/main.jpg",
+      "images": [
+        "assets/media/projects/Badger/main.jpg",
+        "assets/media/projects/Badger/IMG_1321.jpg",
+        "assets/media/projects/Badger/IMG_1323.jpg",
+        "assets/media/projects/Badger/IMG_1330.jpg"
+      ],
+      "details_text": {
+        "bg": "",
+        "en": ""
+      }
     }
   ]
 }
