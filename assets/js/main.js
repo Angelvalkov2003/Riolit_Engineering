@@ -5,18 +5,45 @@ document.addEventListener("DOMContentLoaded", function () {
   const overlay = document.querySelector(".mobile-menu-overlay");
   const body = document.body;
 
+  // Robust scroll lock (prevents "stuck" non-scrollable page)
+  let scrollLockCount = 0;
+  let previousBodyOverflow = "";
+
+  function lockScroll() {
+    if (!body) return;
+    if (scrollLockCount === 0) {
+      previousBodyOverflow = body.style.overflow || "";
+      body.style.overflow = "hidden";
+    }
+    scrollLockCount += 1;
+  }
+
+  function unlockScroll(force = false) {
+    if (!body) return;
+    if (force) {
+      scrollLockCount = 0;
+      body.style.overflow = "";
+      previousBodyOverflow = "";
+      return;
+    }
+    if (scrollLockCount > 0) scrollLockCount -= 1;
+    if (scrollLockCount === 0) {
+      body.style.overflow = previousBodyOverflow;
+    }
+  }
+
   function openMenu() {
     if (navMenu) navMenu.classList.add("active");
     if (overlay) overlay.classList.add("active");
     if (mobileMenuToggle) mobileMenuToggle.classList.add("active");
-    if (body) body.style.overflow = "hidden";
+    lockScroll();
   }
 
   function closeMenu() {
     if (navMenu) navMenu.classList.remove("active");
     if (overlay) overlay.classList.remove("active");
     if (mobileMenuToggle) mobileMenuToggle.classList.remove("active");
-    if (body) body.style.overflow = "";
+    unlockScroll();
   }
 
   if (mobileMenuToggle && navMenu) {
@@ -48,33 +75,40 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Smooth scroll for anchor links
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener("click", function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute("href"));
-      if (target) {
-        target.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
-      }
-    });
-  });
-
   // Show success/error messages from contact form
   const urlParams = new URLSearchParams(window.location.search);
   if (urlParams.get("success") === "1") {
-    alert(
-      "Благодарим ви! Вашето съобщение е изпратено успешно. Ще се свържем с вас скоро."
-    );
-  } else if (urlParams.get("error")) {
-    const error = urlParams.get("error");
-    if (error === "missing_fields") {
-      alert("Моля, попълнете всички задължителни полета.");
-    } else if (error === "invalid_email") {
-      alert("Моля, въведете валиден имейл адрес.");
+    const overlay = document.getElementById("contact-success-overlay");
+    const wrapper = document.querySelector(".contact-form-wrapper");
+    const inlineSuccess = document.querySelector(".form-message-success");
+
+    if (wrapper) wrapper.classList.add("success-pulse");
+    if (overlay) {
+      // Hide the boring inline message when we have the nice overlay
+      if (inlineSuccess) inlineSuccess.style.display = "none";
+
+      // click anywhere to dismiss
+      overlay.addEventListener(
+        "click",
+        () => {
+          overlay.classList.remove("is-visible");
+        },
+        { once: true }
+      );
+      // auto dismiss
+      window.setTimeout(() => overlay.classList.remove("is-visible"), 2000);
     }
+
+    // Clean URL (avoid re-show on refresh) without jumping scroll
+    try {
+      const u = new URL(window.location.href);
+      u.searchParams.delete("success");
+      u.searchParams.delete("error");
+      if (!u.hash) u.hash = "#contact-form";
+      window.history.replaceState({}, "", u.toString());
+    } catch (_) {}
+  } else if (urlParams.get("error")) {
+    // Errors are shown inline on the contact page (no alert popups)
   }
 
 
@@ -161,5 +195,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  // Safety net: never keep the page scroll-locked after navigation/bfcache restore
+  window.addEventListener("pageshow", function () {
+    unlockScroll(true);
+    if (navMenu) navMenu.classList.remove("active");
+    if (overlay) overlay.classList.remove("active");
+    if (mobileMenuToggle) mobileMenuToggle.classList.remove("active");
+  });
 
 });

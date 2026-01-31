@@ -73,7 +73,7 @@ include 'includes/header.php';
         <!-- Projects Grid -->
         <?php if (empty($projects)): ?>
         <div style="padding: 2rem; text-align: center; background: var(--bg-light); border-radius: 10px; margin: 2rem 0;">
-            <p style="color: var(--text-light);">Няма налични проекти в момента.</p>
+            <p style="color: var(--text-light);"><?php echo __('projects_empty'); ?></p>
         </div>
         <?php else: ?>
         <div class="projects-modern-grid">
@@ -101,9 +101,9 @@ include 'includes/header.php';
         <?php endif; ?>
 
         <div style="margin-top: 3rem; padding: 2rem; background: var(--bg-light); border-radius: 10px;">
-            <h2 style="margin-bottom: 1rem; color: var(--primary-color);">За нашите проекти</h2>
+            <h2 style="margin-bottom: 1rem; color: var(--primary-color);"><?php echo __('projects_about_title'); ?></h2>
             <p style="color: var(--text-light); line-height: 1.8;">
-                Проектите в които участва Риолит Инженеринг са едни от водещите инфраструктурни проекти реализирани по Европейски програми и частни инвестиции. Ние сме горди с участието си в проекти, които подобряват инфраструктурата и качеството на живот в България. Всеки проект се изпълнява с високи стандарти за качество, използвайки висококачествени и иновативни материали.
+                <?php echo __('projects_about_text'); ?>
             </p>
         </div>
     </section>

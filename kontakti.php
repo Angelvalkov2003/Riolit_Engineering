@@ -72,21 +72,26 @@ include 'includes/header.php';
             </div>
         </div>
 
-        <div class="contact-form-wrapper">
+        <div class="contact-form-wrapper" id="contact-form">
             <div class="contact-form-header">
                 <h2><?php echo __('contact_form_title'); ?></h2>
                 <p><?php echo __('contact_form_subtitle'); ?></p>
             </div>
 
             <?php if (isset($_GET['success']) && $_GET['success'] == '1'): ?>
-                <div class="form-message form-message-success">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24">
-                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                    </svg>
-                    <div>
-                        <strong><?php echo __('contact_form_success'); ?></strong>
-                        <p><?php echo __('contact_form_success_msg'); ?></p>
+                <!-- Success overlay/toast -->
+                <div class="contact-success-overlay is-visible" id="contact-success-overlay" aria-live="polite" aria-atomic="true">
+                    <div class="contact-success-card">
+                        <div class="contact-success-check">
+                            <svg viewBox="0 0 52 52" width="52" height="52" aria-hidden="true">
+                                <circle class="check-circle" cx="26" cy="26" r="25" fill="none"></circle>
+                                <path class="check-mark" fill="none" d="M14 27 L22 35 L38 18"></path>
+                            </svg>
+                        </div>
+                        <div class="contact-success-text">
+                            <div class="contact-success-title"><?php echo __('contact_form_success'); ?></div>
+                            <div class="contact-success-subtitle"><?php echo __('contact_form_success_msg'); ?></div>
+                        </div>
                     </div>
                 </div>
             <?php endif; ?>
@@ -107,6 +112,8 @@ include 'includes/header.php';
                                 echo __('contact_form_error_email');
                             } elseif ($_GET['error'] == 'privacy_required') {
                                 echo __('contact_form_error_privacy');
+                            } elseif ($_GET['error'] == 'send_failed') {
+                                echo __('contact_form_error_general');
                             } else {
                                 echo __('contact_form_error_general');
                             }

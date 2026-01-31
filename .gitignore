@@ -1,0 +1,9 @@
+# Local secrets / environment
+/config/resend.local.php
+/.env
+
+# OS / editor
+Thumbs.db
+Desktop.ini
+.DS_Store
+

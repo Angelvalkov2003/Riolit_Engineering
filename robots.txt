@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Keep contact form result URLs out of index
+Disallow: /kontakti.php?success=
+Disallow: /kontakti.php?error=
+
+# Sitemap (update domain if needed)
+Sitemap: https://www.riolit.bg/sitemap.xml

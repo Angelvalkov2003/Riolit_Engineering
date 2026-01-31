@@ -182,7 +182,7 @@ include 'includes/header.php';
                     <p><?php echo __('quality_chamber_desc'); ?></p>
                 </div>
                 <div class="chamber-image">
-                    <img src="medal.png" alt="Член на КАМАРАТА НА СТРОИТЕЛИТЕ В БЪЛГАРИЯ" style="max-width: 250px; width: 100%; height: auto; display: block;">
+                    <img src="medal.png" alt="<?php echo htmlspecialchars(__('chamber_member_alt')); ?>" style="max-width: 250px; width: 100%; height: auto; display: block;">
                 </div>
             </div>
         </div>

@@ -5,10 +5,19 @@ if (!isset($lang)) {
 }
 $current_lang = isset($lang) ? $lang : 'bg';
 
+if (!function_exists('__')) {
+    include_once __DIR__ . '/includes/translations.php';
+}
+
 // Get localized content
 $project_title = isset($project['title'][$current_lang]) ? $project['title'][$current_lang] : $project['title']['bg'];
 $project_location = isset($project['location'][$current_lang]) ? $project['location'][$current_lang] : $project['location']['bg'];
 $project_details = isset($project['details_text'][$current_lang]) ? $project['details_text'][$current_lang] : (isset($project['details_text']['bg']) ? $project['details_text']['bg'] : '');
+
+$label_show_more = __('project_show_more');
+$label_hide = __('project_hide');
+$label_gallery = __('project_gallery');
+$label_back_to_projects = __('project_back_to_projects');
 ?>
 
 <main>
@@ -143,7 +152,7 @@ $project_details = isset($project['details_text'][$current_lang]) ? $project['de
                     </div>
                     <div class="project-show-more-wrapper">
                         <button class="btn btn-outline project-show-more-btn" id="project-show-more-btn" onclick="toggleProjectText()">
-                            <?php echo $current_lang === 'bg' ? 'Покажи още' : 'Show more'; ?>
+                            <?php echo htmlspecialchars($label_show_more); ?>
                         </button>
                     </div>
                     <?php else: ?>
@@ -157,7 +166,7 @@ $project_details = isset($project['details_text'][$current_lang]) ? $project['de
                 <!-- Project Gallery with Lightbox -->
                 <?php if (!empty($project['images']) && count($project['images']) > 1): ?>
                 <div class="project-gallery-section">
-                    <h2><?php echo $current_lang === 'bg' ? 'Галерия' : 'Gallery'; ?></h2>
+                    <h2><?php echo htmlspecialchars($label_gallery); ?></h2>
                     <div class="project-gallery" id="project-gallery">
                         <?php foreach ($project['images'] as $index => $image): ?>
                             <div class="project-gallery-item" onclick="openLightbox(<?php echo $index; ?>)">
@@ -180,7 +189,7 @@ $project_details = isset($project['details_text'][$current_lang]) ? $project['de
 
                 <!-- Back to Projects -->
                 <div class="project-back-link">
-                    <a href="proekti.php" class="btn btn-primary">← <?php echo $current_lang === 'bg' ? 'Назад към проектите' : 'Back to projects'; ?></a>
+                    <a href="proekti.php" class="btn btn-primary">← <?php echo htmlspecialchars($label_back_to_projects); ?></a>
                 </div>
             </div>
         </div>
@@ -210,6 +219,9 @@ $project_details = isset($project['details_text'][$current_lang]) ? $project['de
 </style>
 
 <script>
+const LABEL_SHOW_MORE = <?php echo json_encode($label_show_more, JSON_UNESCAPED_UNICODE); ?>;
+const LABEL_HIDE = <?php echo json_encode($label_hide, JSON_UNESCAPED_UNICODE); ?>;
+
 // Project text toggle
 function toggleProjectText() {
     const previewWrapper = document.querySelector('.project-text-preview-wrapper');
@@ -222,7 +234,7 @@ function toggleProjectText() {
             // Разгъвам текста
             if (previewWrapper) previewWrapper.style.display = 'none';
             full.style.display = 'block';
-            btn.textContent = '<?php echo $current_lang === 'bg' ? 'Скрий' : 'Hide'; ?>';
+            btn.textContent = LABEL_HIDE;
             
             // Директно телепортиране без анимация до началото на текста
             const textSection = document.querySelector('.project-details-text-section');
@@ -240,7 +252,7 @@ function toggleProjectText() {
             // При скриване показваме preview отново
             if (previewWrapper) previewWrapper.style.display = 'block';
             full.style.display = 'none';
-            btn.textContent = '<?php echo $current_lang === 'bg' ? 'Покажи още' : 'Show more'; ?>';
+            btn.textContent = LABEL_SHOW_MORE;
         }
     }
 }

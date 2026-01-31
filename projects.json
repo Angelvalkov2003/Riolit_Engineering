@@ -175,8 +175,8 @@
         "en": "BANYA, BUTA and PANAGYRSKI KOLONI – water cycle"
       },
       "location": {
-        "bg": "",
-        "en": ""
+        "bg": "с. Баня, с. Бъта и Панагюрски колонии",
+        "en": "Banya, Buta and Panagyurski Koloni, Bulgaria"
       },
       "main_image": "assets/media/projects/BANYA, BUTA, PANAGYRSKI KOLONI/main.jpg",
       "images": [
@@ -233,8 +233,8 @@
         "assets/media/projects/MaxicomPL/IMG_6992.jpg"
       ],
       "details_text": {
-        "bg": "",
-        "en": ""
+        "bg": "Вакуумно отводняване на плосък покрив.\n\nГлавен изпълнител: ГБС Пловдив АД\nИзпълнител: Риолит Инженеринг ЕООД",
+        "en": "Vacuum drainage for a flat roof.\n\nMain contractor: GBS Plovdiv AD\nContractor: Riolit Engineering Ltd."
       }
     },
     {
@@ -478,8 +478,8 @@
         "assets/media/projects/GipsovoRadinovo/IMAG1770.jpg"
       ],
       "details_text": {
-        "bg": "",
-        "en": ""
+        "bg": "Изпълнение на строително-монтажни дейности по воден цикъл.\n\nИзпълнител: Риолит Инженеринг ЕООД",
+        "en": "Construction and installation works for a water cycle project.\n\nContractor: Riolit Engineering Ltd."
       }
     },
     {
@@ -500,8 +500,8 @@
         "assets/media/projects/TraceGrupHolding/IMG_20170828_183050.jpg"
       ],
       "details_text": {
-        "bg": "",
-        "en": ""
+        "bg": "Инфраструктурни строително-монтажни дейности.\n\nГлавен изпълнител: Трейс Груп Холд АД\nИзпълнител: Риолит Инженеринг ЕООД",
+        "en": "Infrastructure construction and installation works.\n\nMain contractor: Trace Group Hold AD\nContractor: Riolit Engineering Ltd."
       }
     },
     {
@@ -511,8 +511,8 @@
         "en": "Internal installations Mekalit and Kukov 1"
       },
       "location": {
-        "bg": "",
-        "en": ""
+        "bg": "България",
+        "en": "Bulgaria"
       },
       "main_image": "assets/media/projects/mekalik/main.jpg",
       "images": [
@@ -523,8 +523,8 @@
         "assets/media/projects/mekalik/IMG_20190812_135646771.jpg"
       ],
       "details_text": {
-        "bg": "",
-        "en": ""
+        "bg": "Изпълнение на вътрешни инсталации.\n\nИзпълнител: Риолит Инженеринг ЕООД",
+        "en": "Execution of internal installations.\n\nContractor: Riolit Engineering Ltd."
       }
     },
     {
@@ -578,8 +578,8 @@
         "en": "Badger v SKF"
       },
       "location": {
-        "bg": "",
-        "en": ""
+        "bg": "България",
+        "en": "Bulgaria"
       },
       "main_image": "assets/media/projects/Badger/main.jpg",
       "images": [
@@ -589,8 +589,8 @@
         "assets/media/projects/Badger/IMG_1330.jpg"
       ],
       "details_text": {
-        "bg": "",
-        "en": ""
+        "bg": "Строително-монтажни дейности.\n\nИзпълнител: Риолит Инженеринг ЕООД",
+        "en": "Construction and installation works.\n\nContractor: Riolit Engineering Ltd."
       }
     }
   ]

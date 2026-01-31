@@ -147,7 +147,7 @@ include 'includes/header.php';
                     <p><?php echo __('quality_chamber_desc'); ?></p>
                 </div>
                 <div class="chamber-image">
-                    <img src="medal.png" alt="Член на КАМАРАТА НА СТРОИТЕЛИТЕ В БЪЛГАРИЯ" style="max-width: 250px; width: 100%; height: auto; display: block;">
+                    <img src="medal.png" alt="<?php echo htmlspecialchars(__('chamber_member_alt')); ?>" style="max-width: 250px; width: 100%; height: auto; display: block;">
                 </div>
             </div>
         </div>
@@ -176,7 +176,7 @@ include 'includes/header.php';
                         <img src="partners/decatrade.jpg" alt="Decatrade" class="brand-logo brand-logo-decatrade">
                     </div>
                     <div class="brand-item brand-item-glavbolgarstroy">
-                        <img src="partners/glavbolgarstroy.avif" alt="Главболгарстрой" class="brand-logo brand-logo-glavbolgarstroy">
+                        <img src="partners/glavbolgarstroy.avif" alt="<?php echo htmlspecialchars(__('partner_glavbolgarstroy_alt')); ?>" class="brand-logo brand-logo-glavbolgarstroy">
                     </div>
                     <div class="brand-item brand-item-hauraton">
                         <img src="partners/hauraton.jpg" alt="Hauraton" class="brand-logo brand-logo-hauraton">
@@ -216,7 +216,7 @@ include 'includes/header.php';
                         <img src="partners/decatrade.jpg" alt="Decatrade" class="brand-logo brand-logo-decatrade">
                     </div>
                     <div class="brand-item brand-item-glavbolgarstroy">
-                        <img src="partners/glavbolgarstroy.avif" alt="Главболгарстрой" class="brand-logo brand-logo-glavbolgarstroy">
+                        <img src="partners/glavbolgarstroy.avif" alt="<?php echo htmlspecialchars(__('partner_glavbolgarstroy_alt')); ?>" class="brand-logo brand-logo-glavbolgarstroy">
                     </div>
                     <div class="brand-item brand-item-hauraton">
                         <img src="partners/hauraton.jpg" alt="Hauraton" class="brand-logo brand-logo-hauraton">

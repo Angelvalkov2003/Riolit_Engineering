@@ -1,6 +1,8 @@
 <?php
 // Language management
-session_start();
+if (session_status() !== PHP_SESSION_ACTIVE) {
+    session_start();
+}
 
 // Available languages
 $available_languages = ['bg' => 'Български', 'en' => 'English'];
@@ -13,10 +15,7 @@ if (!isset($_SESSION['lang'])) {
 // Handle language switch
 if (isset($_GET['lang']) && array_key_exists($_GET['lang'], $available_languages)) {
     $_SESSION['lang'] = $_GET['lang'];
-    // Redirect to same page without lang parameter
-    $current_page = basename($_SERVER['PHP_SELF']);
-    header('Location: ' . $current_page);
-    exit;
+    // No redirect: keep ?lang= in URL for sharing/SEO and to preserve other query params.
 }
 
 $lang = $_SESSION['lang'];

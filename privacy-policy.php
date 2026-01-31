@@ -1,94 +1,95 @@
 <?php
-$page_title = "Политика за поверителност - Риолит Инженеринг ЕООД";
-$page_description = "Политика за поверителност и защита на личните данни на Риолит Инженеринг ЕООД";
+include 'includes/translations.php';
+$page_title = __('privacy_page_title');
+$page_description = __('privacy_page_description');
 include 'includes/header.php';
 ?>
 
 <main>
     <section class="page-content">
         <div class="page-header">
-            <h1>Политика за поверителност</h1>
-            <p>Последна актуализация: <?php echo date('d.m.Y'); ?></p>
+            <h1><?php echo __('privacy_h1'); ?></h1>
+            <p><?php echo __('privacy_last_updated'); ?> <?php echo date('d.m.Y'); ?></p>
         </div>
 
         <div class="about-detail">
-            <h2>1. Общи разпоредби</h2>
-            <p>Риолит Инженеринг ЕООД (наричано по-долу "Компанията", "ние", "нас", "наш") се ангажира да защитава поверителността на личните данни на всички посетители на нашия уебсайт и потребители на нашите услуги.</p>
-            <p>Настоящата Политика за поверителност обяснява как събираме, използваме, съхраняваме и защитаваме вашите лични данни в съответствие с Регламент (ЕС) 2016/679 (GDPR) и българското законодателство.</p>
+            <h2><?php echo __('privacy_s1_title'); ?></h2>
+            <p><?php echo __('privacy_s1_p1'); ?></p>
+            <p><?php echo __('privacy_s1_p2'); ?></p>
 
-            <h2>2. Данни, които събираме</h2>
-            <p>Може да събираме следните видове лични данни:</p>
+            <h2><?php echo __('privacy_s2_title'); ?></h2>
+            <p><?php echo __('privacy_s2_intro'); ?></p>
             <ul style="list-style: disc; padding-left: 2rem; margin: 1rem 0;">
-                <li><strong>Контактна информация:</strong> име, имейл адрес, телефонен номер</li>
-                <li><strong>Технически данни:</strong> IP адрес, тип браузър, операционна система, информация за устройството</li>
-                <li><strong>Данни за използване:</strong> как използвате нашия уебсайт, кои страници посещавате</li>
-                <li><strong>Съобщения:</strong> информация, която ни изпращате чрез контактната форма</li>
+                <li><?php echo __('privacy_s2_li1'); ?></li>
+                <li><?php echo __('privacy_s2_li2'); ?></li>
+                <li><?php echo __('privacy_s2_li3'); ?></li>
+                <li><?php echo __('privacy_s2_li4'); ?></li>
             </ul>
 
-            <h2>3. Как използваме вашите данни</h2>
-            <p>Използваме събраните данни за следните цели:</p>
+            <h2><?php echo __('privacy_s3_title'); ?></h2>
+            <p><?php echo __('privacy_s3_intro'); ?></p>
             <ul style="list-style: disc; padding-left: 2rem; margin: 1rem 0;">
-                <li>Отговор на вашите запитвания и комуникация с вас</li>
-                <li>Предоставяне на нашите услуги</li>
-                <li>Подобряване на нашия уебсайт и услуги</li>
-                <li>Спазване на правни задължения</li>
-                <li>Защита на нашите права и интереси</li>
+                <li><?php echo __('privacy_s3_li1'); ?></li>
+                <li><?php echo __('privacy_s3_li2'); ?></li>
+                <li><?php echo __('privacy_s3_li3'); ?></li>
+                <li><?php echo __('privacy_s3_li4'); ?></li>
+                <li><?php echo __('privacy_s3_li5'); ?></li>
             </ul>
 
-            <h2>4. Основание за обработка</h2>
-            <p>Обработваме вашите лични данни на основание:</p>
+            <h2><?php echo __('privacy_s4_title'); ?></h2>
+            <p><?php echo __('privacy_s4_intro'); ?></p>
             <ul style="list-style: disc; padding-left: 2rem; margin: 1rem 0;">
-                <li>Вашето съгласие (когато сте го предоставили)</li>
-                <li>Изпълнение на договор или стъпки преди сключване на договор</li>
-                <li>Спазване на правни задължения</li>
-                <li>Легитимни интереси на Компанията</li>
+                <li><?php echo __('privacy_s4_li1'); ?></li>
+                <li><?php echo __('privacy_s4_li2'); ?></li>
+                <li><?php echo __('privacy_s4_li3'); ?></li>
+                <li><?php echo __('privacy_s4_li4'); ?></li>
             </ul>
 
-            <h2>5. Съхранение на данни</h2>
-            <p>Съхраняваме вашите лични данни само толкова дълго, колкото е необходимо за постигане на целите, за които са събрани, или колкото изисква приложимото законодателство.</p>
+            <h2><?php echo __('privacy_s5_title'); ?></h2>
+            <p><?php echo __('privacy_s5_p1'); ?></p>
 
-            <h2>6. Споделяне на данни</h2>
-            <p>Не продаваме, не отдаваме под наем и не разкриваме вашите лични данни на трети страни, освен в следните случаи:</p>
+            <h2><?php echo __('privacy_s6_title'); ?></h2>
+            <p><?php echo __('privacy_s6_intro'); ?></p>
             <ul style="list-style: disc; padding-left: 2rem; margin: 1rem 0;">
-                <li>Когато е необходимо за предоставяне на нашите услуги</li>
-                <li>Когато е изискано от закон</li>
-                <li>С вашето изрично съгласие</li>
-                <li>За защита на нашите права и интереси</li>
+                <li><?php echo __('privacy_s6_li1'); ?></li>
+                <li><?php echo __('privacy_s6_li2'); ?></li>
+                <li><?php echo __('privacy_s6_li3'); ?></li>
+                <li><?php echo __('privacy_s6_li4'); ?></li>
             </ul>
 
-            <h2>7. Вашите права</h2>
-            <p>В съответствие с GDPR, имате следните права:</p>
+            <h2><?php echo __('privacy_s7_title'); ?></h2>
+            <p><?php echo __('privacy_s7_intro'); ?></p>
             <ul style="list-style: disc; padding-left: 2rem; margin: 1rem 0;">
-                <li><strong>Право на достъп:</strong> Можете да поискате копие от вашите лични данни</li>
-                <li><strong>Право на коригиране:</strong> Можете да поискате корекция на неточни данни</li>
-                <li><strong>Право на изтриване:</strong> Можете да поискате изтриване на вашите данни</li>
-                <li><strong>Право на ограничаване:</strong> Можете да поискате ограничаване на обработката</li>
-                <li><strong>Право на преносимост:</strong> Можете да поискате пренос на вашите данни</li>
-                <li><strong>Право на възражение:</strong> Можете да възразите срещу обработката</li>
-                <li><strong>Право на оттегляне на съгласието:</strong> Можете да оттеглите съгласието си по всяко време</li>
+                <li><?php echo __('privacy_s7_li1'); ?></li>
+                <li><?php echo __('privacy_s7_li2'); ?></li>
+                <li><?php echo __('privacy_s7_li3'); ?></li>
+                <li><?php echo __('privacy_s7_li4'); ?></li>
+                <li><?php echo __('privacy_s7_li5'); ?></li>
+                <li><?php echo __('privacy_s7_li6'); ?></li>
+                <li><?php echo __('privacy_s7_li7'); ?></li>
             </ul>
 
-            <h2>8. Бисквитки (Cookies)</h2>
-            <p>Нашият уебсайт може да използва бисквитки за подобряване на потребителското изживяване. Можете да контролирате използването на бисквитки чрез настройките на вашия браузър.</p>
+            <h2><?php echo __('privacy_s8_title'); ?></h2>
+            <p><?php echo __('privacy_s8_p1'); ?></p>
 
-            <h2>9. Сигурност</h2>
-            <p>Прилагаме подходящи технически и организационни мерки за защита на вашите лични данни срещу неоторизиран достъп, загуба, унищожаване или промяна.</p>
+            <h2><?php echo __('privacy_s9_title'); ?></h2>
+            <p><?php echo __('privacy_s9_p1'); ?></p>
 
-            <h2>10. Контакти</h2>
-            <p>За въпроси относно обработката на вашите лични данни или за упражняване на вашите права, моля свържете се с нас:</p>
+            <h2><?php echo __('privacy_s10_title'); ?></h2>
+            <p><?php echo __('privacy_s10_p1'); ?></p>
             <p>
-                <strong>Риолит Инженеринг ЕООД</strong><br>
-                Адрес: Пловдив 4000, ул. „Елиезер Калев" 2, ет. 2<br>
-                Телефон: +359 32 590 271<br>
-                Имейл: <a href="mailto:office@riolit.bg" style="color: var(--primary-color);">office@riolit.bg</a>
+                <strong><?php echo __('privacy_s10_company'); ?></strong><br>
+                <?php echo __('privacy_s10_address'); ?><br>
+                <?php echo __('privacy_s10_phone'); ?><br>
+                <?php echo __('privacy_s10_email'); ?> <a href="mailto:office@riolit.bg" style="color: var(--primary-color);">office@riolit.bg</a>
             </p>
 
-            <h2>11. Промени в политиката</h2>
-            <p>Запазваме си правото да актуализираме тази Политика за поверителност по всяко време. Всяка промяна ще бъде публикувана на тази страница с актуализирана дата.</p>
+            <h2><?php echo __('privacy_s11_title'); ?></h2>
+            <p><?php echo __('privacy_s11_p1'); ?></p>
 
             <div style="margin-top: 3rem; padding: 2rem; background: var(--bg-light); border-radius: 10px;">
                 <p style="color: var(--text-light); line-height: 1.8;">
-                    <strong>Забележка:</strong> Тази политика за поверителност е обща и може да бъде адаптирана според конкретните нужди на вашия бизнес. Препоръчва се консултация с правен съветник за пълно съответствие с GDPR и българското законодателство.
+                    <strong><?php echo __('privacy_note_label'); ?></strong> <?php echo __('privacy_note_text'); ?>
                 </p>
             </div>
         </div>
